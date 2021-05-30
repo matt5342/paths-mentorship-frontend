@@ -9,7 +9,7 @@ export default function Navigation() {
   // style={{color: navColor}}
   return (
     <div>
-        <Navbar className="color-nav" variant="light" >
+        <Navbar fixed="top" className="color-nav" variant="light" >
 
             <Navbar.Brand href="home">
               <img width="200px" height="auto" className="img-responsive" src={Logo}  alt="logo" />

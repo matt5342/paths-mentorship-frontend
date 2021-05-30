@@ -11,6 +11,7 @@ function App() {
     <div className="wrapper">
       <Navigation />
       <br></br><br></br>
+      <br></br><br></br><br></br>
       <BrowserRouter>
         <Switch>
           <Route exact path="/home" component={Home} />
