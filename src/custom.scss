@@ -1,0 +1,23 @@
+// Override default variables before the import
+// $body-bg: rgb(72, 94, 168);
+$enable-gradients: true;
+$body-bg: rgb(162, 192, 236);
+// $body-bg: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,210,246,1) 0%, rgba(79,126,196,1) 100%);
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.color-nav{
+    background-color: #5a87cb;
+}
+
+.nav-btn {
+    color: white;
+}
+
+.home {
+    align-content: center;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
