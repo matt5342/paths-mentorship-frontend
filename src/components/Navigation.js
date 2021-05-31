@@ -6,7 +6,7 @@ import Logo from '../assets/bio_logo.png';
 
 export default function Navigation() {
   let navColor = '#ffffff'
-  // style={{color: navColor}}
+
   return (
     <div>
         <Navbar fixed="top" className="color-nav" variant="light" >

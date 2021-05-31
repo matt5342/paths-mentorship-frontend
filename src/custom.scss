@@ -26,4 +26,72 @@ body {
     height: auto;
     width: auto;
     overflow: hidden;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
   }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+// Footer styles from https://www.ordinarycoders.com/blog/article/bootstrap-footers
+  .footer-dark {
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color:#5a87cb;
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:18px;
+  }
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:16px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:white;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.5;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  // End Footer Styles

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation'
 import Home from './components/Home'
 import Program from './components/Program'
+import NavBottom from './components/NavBottom'
 
 
 function App() {
@@ -19,8 +20,9 @@ function App() {
           <Route exact path="/programs" component={Program} />
           
         </Switch>
-      
+
       </BrowserRouter>
+      <NavBottom/>
     </div>
   );
 }

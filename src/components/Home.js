@@ -21,6 +21,7 @@ export default function Home() {
                 </h5>
             </Col>
         </Row>
+        <hr></hr>
         <br></br>
         <Row className="text-center">
             <img width="800px" height="auto" className="img-responsive mx-auto" src={program_components_pie}  alt="logo"/>
