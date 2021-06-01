@@ -1,6 +1,7 @@
 import React from 'react';
-import group_collab from '../assets/group_collab.png'; 
-import program_components_pie from '../assets/program_components_pie.png'; 
+import group_collab from '../assets/home/group_collab.png'; 
+import program_components_pie from '../assets/home/program_components_pie.png'; 
+import pgcps_year_end_report from '../assets/home/pgcps_year_end_report.png'; 
 import { Row, Col, Table } from 'react-bootstrap';
 
 export default function Home() {
@@ -59,6 +60,10 @@ export default function Home() {
                 </tr>
             </tbody>
     </Table>
+    <hr></hr>
+    <Row className="text-center">
+            <img width="800px" height="auto" className="img-responsive mx-auto" src={pgcps_year_end_report}  alt="logo"/>
+    </Row>
 
     </div>
   )

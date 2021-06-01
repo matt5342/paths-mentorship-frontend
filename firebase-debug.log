@@ -1,0 +1,92 @@
+[debug] [2021-06-01T11:52:45.532Z] ----------------------------------------------------------------------
+[debug] [2021-06-01T11:52:45.533Z] Command:       /Users/mattsewell/.nvm/versions/node/v15.12.0/bin/node /Users/mattsewell/.nvm/versions/node/v15.12.0/bin/firebase deploy
+[debug] [2021-06-01T11:52:45.533Z] CLI Version:   9.12.0
+[debug] [2021-06-01T11:52:45.533Z] Platform:      darwin
+[debug] [2021-06-01T11:52:45.533Z] Node Version:  v15.12.0
+[debug] [2021-06-01T11:52:45.534Z] Time:          Tue Jun 01 2021 07:52:45 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-06-01T11:52:45.534Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-01T11:52:45.537Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-01T11:52:45.537Z] > authorizing via signed-in user (mattfsewell@gmail.com)
+[debug] [2021-06-01T11:52:45.537Z] [iam] checking project paths-mentorship for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2021-06-01T11:52:45.538Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/paths-mentorship:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2021-06-01T11:52:45.631Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=30","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-01T11:52:45.632Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/paths-mentorship/serviceAccounts/paths-mentorship@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-06-01T11:52:45.733Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'paths-mentorship'...
+[info] 
+[info] i  deploying functions 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-06-01T11:52:46.566Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/paths-mentorship/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-06-01T11:52:46.566Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/paths-mentorship/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-06-01T11:52:46.566Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/paths-mentorship/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-06-01T11:52:47.082Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-01T11:52:47.100Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2021-06-01T11:52:47.101Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/paths-mentorship/services/cloudbuild.googleapis.com:enable  
+ 
+[debug] [2021-06-01T11:52:47.115Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-06-01T11:52:47.998Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:47 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-01T11:52:58.009Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/paths-mentorship/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-06-01T11:52:58.335Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-06-01T11:52:58.341Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/paths-mentorship/adminSdkConfig  
+ 
+[debug] [2021-06-01T11:52:58.783Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: preparing functions directory for uploading... 
+[debug] [2021-06-01T11:52:58.785Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/paths-mentorship/configs  
+ 
+[debug] [2021-06-01T11:52:59.292Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-01T11:52:59.294Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/paths-mentorship/configs/gmail/variables  
+ 
+[debug] [2021-06-01T11:52:59.424Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-01T11:52:59.426Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/paths-mentorship/configs/gmail/variables/email  
+ 
+[debug] [2021-06-01T11:52:59.426Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/paths-mentorship/configs/gmail/variables/password  
+ 
+[debug] [2021-06-01T11:52:59.536Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-01T11:52:59.580Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:52:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-01T11:52:59.580Z] Analyizing backend with strategy parseJSExports
+[debug] [2021-06-01T11:52:59.672Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "firebase-admin": "^9.8.0",
+    "firebase-functions": "^3.14.1",
+    "nodemailer": "^6.6.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-06-01T11:52:59.673Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/paths-mentorship/locations/-/functions  
+ 
+[debug] [2021-06-01T11:53:00.290Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 01 Jun 2021 11:53:00 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-01T11:53:00.360Z] TypeError: Reduce of empty array with no initial value
+    at Array.reduce (<anonymous>)
+    at release (/Users/mattsewell/.nvm/versions/node/v15.12.0/lib/node_modules/firebase-tools/lib/deploy/functions/release.js:47:10)
+    at processTicksAndRejections (node:internal/process/task_queues:94:5)
+[error] 
+[error] Error: An unexpected error has occurred.

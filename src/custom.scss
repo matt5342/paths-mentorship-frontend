@@ -1,7 +1,7 @@
 // Override default variables before the import
 // $body-bg: rgb(72, 94, 168);
 $enable-gradients: true;
-$body-bg: rgb(162, 192, 236);
+$body-bg: #c3d2f4ff;
 // $body-bg: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,210,246,1) 0%, rgba(79,126,196,1) 100%);
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

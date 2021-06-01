@@ -1,6 +1,6 @@
 import React from 'react';
 import {  } from 'react-bootstrap'
-import Logo from '../assets/bio_logo.png'; 
+import Logo from '../assets/logos/bio_logo.png'; 
 
 
 

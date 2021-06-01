@@ -1,17 +1,17 @@
 import React from 'react';
 import { Carousel, Row, Col } from 'react-bootstrap'
-import program_slides_career_seminars from '../assets/program_slides_career_seminars.png'; 
-import program_slides_dev_workshops from '../assets/program_slides_dev_workshops.png'; 
-import program_slides_mentorship from '../assets/program_slides_mentorship.png'; 
-import program_slides_science_project from '../assets/program_slides_science_project.png'; 
-import acps_logo from '../assets/acps_logo.png'; 
-import pgcps_logo from '../assets/pgcps_logo.jpeg'; 
+import career_seminars from '../assets/program_slides/career_seminars.png'; 
+import dev_workshops from '../assets/program_slides/dev_workshops.png'; 
+import mentorship from '../assets/program_slides/mentorship.png'; 
+import science_project from '../assets/program_slides/science_project.png'; 
+import acps_logo from '../assets/logos/acps_logo.png'; 
+import pgcps_logo from '../assets//logos/pgcps_logo.png'; 
 
 const program_slides = [
-    program_slides_career_seminars,  
-    program_slides_dev_workshops,  
-    program_slides_mentorship,  
-    program_slides_science_project  
+    mentorship,  
+    dev_workshops,  
+    science_project,  
+    career_seminars  
 ]
 
 export default function Program() {
