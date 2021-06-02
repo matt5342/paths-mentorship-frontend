@@ -10,18 +10,18 @@ export default function NavBottom() {
   return (
     <div>
       <br></br>
-        <div class="footer-dark">
+        <div className="footer-dark">
           <footer>
-              <div class="container">
-                  <div class="row">
-                      <div class="col-sm-6 col-md-3 item">
+              <div className="container">
+                  <div className="row">
+                      <div className="col-sm-6 col-md-3 item">
                           <h3>Links</h3>
                           <ul>
                           <li><a href="https://www.instagram.com/biomedmentors/">Instagram</a></li>
                     <li><a href="https://www.instagram.com/biomedmentors/">LinkedIn</a></li>
                           </ul>
                       </div>
-                      <div class="col-sm-6 col-md-3 item">
+                      <div className="col-sm-6 col-md-3 item">
                           <h3>About</h3>
                           <ul>
                               <li><a href="students-parents">Students + Parents</a></li>
@@ -29,13 +29,13 @@ export default function NavBottom() {
                               <li><a href="contact">Contact Us</a></li>
                           </ul>
                       </div>
-                      <div class="col-md-6 item text">
+                      <div className="col-md-6 item text">
                           <h3>PATHS Mentorship</h3>
                           <p>Here to help YOU achieve your STEM and Healthcare dreams!</p>
                       </div>
-                      {/* <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div> */}
+                      {/* <div className="col item social"><a href="#"><i className="icon ion-social-facebook"></i></a><a href="#"><i className="icon ion-social-twitter"></i></a><a href="#"><i className="icon ion-social-snapchat"></i></a><a href="#"><i className="icon ion-social-instagram"></i></a></div> */}
                   </div>
-                  <p class="copyright">
+                  <p className="copyright">
                   © 2021. Designed by Matthew Sewell | 
                   <a href="https://github.com/matt5342" style={{color:'blue'}}> Github </a>|
                   </p>

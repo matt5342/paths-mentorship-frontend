@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Axios, db } from '../firebase/firebaseConfig'
+import { Axios } from '../firebase/firebaseConfig'
 // import './styled.scss'
 
 const ContactForm = () => {
@@ -22,17 +22,17 @@ const ContactForm = () => {
   }
   const sendEmail = () => {
     Axios.post(
-      'https://us-central1-your-app-name.cloudfunctions.net/submit',
+      'https://us-central1-Paths-mentorship.cloudfunctions.net/submit',
       formData
     )
-      .then(res => {
-        db.collection('emails').add({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          time: new Date(),
-        })
-      })
+      // .then(res => {
+      //   db.collection('emails').add({
+      //     name: formData.name,
+      //     email: formData.email,
+      //     message: formData.message,
+      //     time: new Date(),
+      //   })
+      // })
       .catch(error => {
         console.log(error)
       })

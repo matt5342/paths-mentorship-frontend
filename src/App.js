@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/programs" component={Program} />
           <Route exact path="/opportunities" component={Opportunities} />
           <Route exact path="/about" component={WhoWeAre} />
-          {/* <Route exact path="/contact" component={ContactForm} /> */}
+          <Route exact path="/contact" component={ContactForm} />
           
         </Switch>
 

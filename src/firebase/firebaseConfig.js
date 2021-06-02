@@ -1,6 +1,6 @@
 import firebase from 'firebase/app' // doing import firebase from 'firebase' or import * as firebase from firebase is not good practice.
 import 'firebase/auth'
-import 'firebase/database'
+// import 'firebase/database'
 import 'firebase/firestore';
 import Axios from 'axios'
 
@@ -15,6 +15,6 @@ let config = {
 
 firebase.initializeApp(config)
 
-const db = firebase.firestore()
+// const db = firebase.firestore()
 
-export { Axios, db }
+export { Axios }
