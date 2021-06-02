@@ -7,6 +7,13 @@ import { Row, Col, Table } from 'react-bootstrap';
 export default function Home() {
   return (
     <div className="container">   
+        <Row className="justify-content-center">
+            <h1>PATHS Mentorship! Logo Here!!</h1>
+        </Row>
+        <Row className="justify-content-center">
+            <h3>Program for Advancing the Health Sciences</h3>
+        </Row>
+        <hr></hr>
         <Row className="text-center">
             <img width="800px" height="auto" className="img-responsive mx-auto" src={group_collab}  alt="logo"/>
         </Row>
@@ -62,7 +69,7 @@ export default function Home() {
     </Table>
     <hr></hr>
     <Row className="text-center">
-            <img width="800px" height="auto" className="img-responsive mx-auto" src={pgcps_year_end_report}  alt="logo"/>
+            <img width="1000px" height="auto" className="img-responsive mx-auto" src={pgcps_year_end_report}  alt="logo"/>
     </Row>
 
     </div>

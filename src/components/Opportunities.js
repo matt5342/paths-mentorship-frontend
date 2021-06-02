@@ -19,12 +19,18 @@ export default function Opportunities() {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                         <Card.Body>
-                                We value near-peer mentorship. Our mentors are young, working professionals in biology and health-related fields in the DMV area. 
-                            Our mentors must complete background verification through the necessary school systems, attend mentor orientation, and 
-                            commit to enriching student experience by providing exceptional guidance and support.
+                            We value near-peer mentorship. Our mentors are young, working professionals in biology and 
+                            health-related fields in the DMV area. Our mentors must complete background verification through 
+                            the necessary school systems, attend mentor orientation, and commit to enriching student experience 
+                            by providing exceptional guidance and support.
+                            <br></br><br></br>
+                            Our mentors commit to meeting with their students at least twice a month, and to keeping an 
+                            open line of communication throughout the program. In the past, mentor and students have built 
+                            strong bonds that go beyond the course of the program.
                             <br></br><br></br>
                             If you are interested in serving as a mentor, our recruitment process begins every August. 
                             Fill out this form so we can notify you when recruitment opens. If you have any questions, 
+
                             <a href="/contact"> contact us</a>!
                         </Card.Body>
                     </Accordion.Collapse>
@@ -39,8 +45,10 @@ export default function Opportunities() {
                         <Card.Body>
                             We are always looking for experiential opportunities for our exceptional students. 
                             These can include summer internships, part time jobs, volunteer work, or field trips and job shadowing. 
-                            The enriching activities we offer prepare our students to be assets to any professional community. 
-                            We have previously connected our exceptional students with special opportunities at FamilyChoice Healthcare and at Georgetown University.
+                            The enriching activities we offer prepare our students to be assets to any professional community.
+                            <br></br><br></br>
+                            We have previously connected our exceptional students with special summer opportunities at FamilyChoice Healthcare and at Georgetown University. 
+                            Our goal is to create a pipeline wherein we teach student the skills they will need to succeed in their jobs and internships.
                             <br></br><br></br>
                             If you are interested in collaborating with our program to provide select students with these 
                             valuable experiences for professional development, let’s set up a meeting! 

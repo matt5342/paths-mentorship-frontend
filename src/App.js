@@ -7,6 +7,7 @@ import Program from './components/Program'
 import NavBottom from './components/NavBottom'
 import ContactForm from './components/ContactUs'
 import Opportunities from './components/Opportunities';
+import WhoWeAre from './components/WhoWeAre';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/programs" component={Program} />
           <Route exact path="/opportunities" component={Opportunities} />
+          <Route exact path="/about" component={WhoWeAre} />
           {/* <Route exact path="/contact" component={ContactForm} /> */}
           
         </Switch>

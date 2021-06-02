@@ -12,14 +12,14 @@ export default function Navigation() {
         <Navbar fixed="top" className="color-nav" variant="light" >
 
             <Navbar.Brand href="home">
-              <img width="200px" height="auto" className="img-responsive" src={Logo}  alt="logo" />
+              <img width="200px" height="auto" className="img-responsive" src={Logo} alt="logo" />
             </Navbar.Brand>
             
             <Nav className="me-auto">
               <Nav.Link href="programs" style={{color: navColor}}>Programs</Nav.Link>
-              <Nav.Link href="opportunities" style={{color: navColor}}>Opportunities with us</Nav.Link>
-              <Nav.Link href="students-parents" style={{color: navColor}}>Students + Parents</Nav.Link>
-              <Nav.Link href="about" style={{color: navColor}}>Who we are</Nav.Link>
+              <Nav.Link href="opportunities" style={{color: navColor}}>Opportunities With Us</Nav.Link>
+              <Nav.Link href="students-parents" style={{color: navColor}}>Students & Parents</Nav.Link>
+              <Nav.Link href="about" style={{color: navColor}}>Who We Are</Nav.Link>
               <Nav.Link href="contact" style={{color: navColor}}>Contact Us</Nav.Link>
             </Nav>
 
