@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Row, Col } from 'react-bootstrap'
+import { Carousel } from 'react-bootstrap'
 import career_seminars from '../assets/program_slides/career_seminars.png'; 
 import dev_workshops from '../assets/program_slides/dev_workshops.png'; 
 import mentorship from '../assets/program_slides/mentorship.png'; 

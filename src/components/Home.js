@@ -54,8 +54,8 @@ export default function Home() {
                 <tr>
                 <td ><strong>Science Project</strong></td>
                 <td>
-                    Students optionally develop a scientific research question and carry out a small research project. 
-                    They are lead through the scientific method and guided through the project by their mentor.
+                    As part of the Action Potential Initiative, students optionally develop a scientific research question and carry out a small research project. 
+                    They are lead through the scientific method and guided through the project by their mentor. Students must apply to participate in this part of the program.
                 </td>
                 </tr>
                 <tr>

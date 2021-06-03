@@ -1,12 +1,7 @@
 import React from 'react';
-import {  } from 'react-bootstrap'
-import Logo from '../assets/logos/bio_logo.png'; 
-
-
+import {  } from 'react-bootstrap' 
 
 export default function NavBottom() {
-  let navColor = '#ffffff'
-
   return (
     <div>
       <br></br>
