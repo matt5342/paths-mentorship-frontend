@@ -19,6 +19,7 @@ export default function NavBottom() {
                       <div className="col-sm-6 col-md-3 item">
                           <h3>About</h3>
                           <ul>
+                              <li><a href="home">Home</a></li>
                               <li><a href="students-parents">Students + Parents</a></li>
                               <li><a href="about">Who we are</a></li>
                               <li><a href="contact">Contact Us</a></li>
