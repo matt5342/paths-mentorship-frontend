@@ -10,6 +10,7 @@ import WhoWeAre from './components/WhoWeAre';
 
 
 function App() {
+
   return (
     <div className="wrapper">
       <Navigation />

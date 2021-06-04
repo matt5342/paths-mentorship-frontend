@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap'
+import { Carousel, Image } from 'react-bootstrap'
 import career_seminars from '../assets/program_slides/career_seminars.png'; 
 import dev_workshops from '../assets/program_slides/dev_workshops.png'; 
 import mentorship from '../assets/program_slides/mentorship.png'; 
@@ -39,13 +39,13 @@ export default function Program() {
             <div className="row">
                 <div className="column">
                     <a href="https://www.acps.k12.va.us/">
-                        <img width="200px" height="200px" className="" src={acps_logo}  alt="acps logo"/>
+                        <Image fluid width="200px" height="200px" className="" src={acps_logo}  alt="acps logo"/>
                     </a>
                     
                 </div>
                 <div className="column">
                     <a href="https://www.pgcps.org/">
-                        <img width="200px" height="200px" className="" src={pgcps_logo}  alt="pgcps logo"/>
+                        <Image fluid width="200px" height="200px" className="" src={pgcps_logo}  alt="pgcps logo"/>
                     </a>
                 </div>
             </div>

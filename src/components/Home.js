@@ -2,7 +2,7 @@ import React from 'react';
 import group_collab from '../assets/home/group_collab.png'; 
 import program_components_pie from '../assets/home/program_components_pie.png'; 
 import pgcps_year_end_report from '../assets/home/pgcps_year_end_report.png'; 
-import { Row, Col, Table } from 'react-bootstrap';
+import { Row, Col, Table, Image } from 'react-bootstrap';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         </Row>
         <hr></hr>
         <Row className="text-center">
-            <img width="800px" height="auto" className="img-responsive mx-auto" src={group_collab}  alt="logo"/>
+            <Image fluid width="800px" height="auto" className="img-responsive mx-auto" src={group_collab}  alt="logo"/>
         </Row>
         <br></br>
         <Row className="justify-content-center">
@@ -32,7 +32,7 @@ export default function Home() {
         <hr></hr>
         <br></br>
         <Row className="text-center">
-            <img width="800px" height="auto" className="img-responsive mx-auto" src={program_components_pie}  alt="logo"/>
+            <Image fluid width="800px" height="auto" className="img-responsive mx-auto" src={program_components_pie}  alt="logo"/>
         </Row>
         <br></br>
         <br></br>
@@ -69,7 +69,7 @@ export default function Home() {
     </Table>
     <hr></hr>
     <Row className="text-center">
-            <img width="1000px" height="auto" className="img-responsive mx-auto" src={pgcps_year_end_report}  alt="logo"/>
+            <Image fluid width="1000px" height="auto" className="img-responsive mx-auto" src={pgcps_year_end_report}  alt="logo"/>
     </Row>
 
     </div>
