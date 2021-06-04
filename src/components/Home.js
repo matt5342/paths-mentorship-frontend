@@ -1,5 +1,6 @@
 import React from 'react';
 import group_collab from '../assets/home/group_collab.png'; 
+import bio_logo from '../assets/logos/bio_logo.png'; 
 import program_components_pie from '../assets/home/program_components_pie.png'; 
 import pgcps_year_end_report from '../assets/home/pgcps_year_end_report.png'; 
 import { Row, Col, Table, Image } from 'react-bootstrap';
@@ -8,7 +9,7 @@ export default function Home() {
   return (
     <div className="container">   
         <Row className="justify-content-center">
-            <h1>PATHS Mentorship! Logo Here!!</h1>
+        <Image fluid width="800px" height="auto" className="img-responsive mx-auto" src={bio_logo}  alt="logo"/>
         </Row>
         <Row className="justify-content-center">
             <h3>Program for Advancing the Health Sciences</h3>

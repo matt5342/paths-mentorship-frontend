@@ -32,8 +32,8 @@ export default function Navigation() {
                   <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown> */}
               </Nav>
-              <Nav>
-                <Nav.Link href="login">Log In</Nav.Link>
+              <Nav className="ml-auto">
+                <Nav.Link href="login" style={{color: navColor}}>Log In/Sign Up</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

@@ -7,6 +7,9 @@ import NavBottom from './components/NavBottom'
 import ContactForm from './components/ContactUs'
 import Opportunities from './components/Opportunities';
 import WhoWeAre from './components/WhoWeAre';
+import StudentsParents from './components/StudentsParents';
+import LogIn from './components/LogIn';
+import SignUp from './components/SignUp';
 
 
 function App() {
@@ -24,6 +27,9 @@ function App() {
           <Route exact path="/opportunities" component={Opportunities} />
           <Route exact path="/about" component={WhoWeAre} />
           <Route exact path="/contact" component={ContactForm} />
+          <Route exact path="/students-parents" component={StudentsParents} />
+          <Route exact path="/login" component={LogIn} />
+          <Route exact path="/signup" component={SignUp} />
           
         </Switch>
 
