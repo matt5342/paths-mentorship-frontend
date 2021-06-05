@@ -1,39 +1,58 @@
-import React from 'react';
-import { Navbar, Nav, Container, Image } from 'react-bootstrap'
-import Logo from '../assets/logos/bio_logo.png'; 
-
+import React, { useState } from 'react';
+import { Navbar, Nav, Container, Image, NavDropdown } from 'react-bootstrap'
+import temp_logo from '../assets/logos/temp_logo.png'; 
+import { withRouter } from 'react-router-dom';
 
 
 export default function Navigation() {
-  let navColor = '#ffffff'
+  const [show, setShow] = useState(false);
+  const showDropdown = (e)=>{
+      console.log(e);
+      setShow(!show);
+  }
+  const hideDropdown = e => {
+      setShow(false);
+  }
 
   return (
     <div className="">
 
 
         <Navbar collapseOnSelect expand="lg" className="color-nav" variant="light">
-          <Container>
+          <Container className="nav-container">
             <Navbar.Brand href="home">
-                <Image fluid width="200px" height="auto" className="img-responsive" src={Logo} alt="logo" />
+                <Image fluid width="200px" height="auto" className="img-responsive" src={temp_logo} alt="logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="programs" style={{color: navColor}}>Programs</Nav.Link>
-                <Nav.Link href="opportunities" style={{color: navColor}}>Opportunities With Us</Nav.Link>
-                <Nav.Link href="students-parents" style={{color: navColor}}>Students & Parents</Nav.Link>
-                <Nav.Link href="about" style={{color: navColor}}>Who We Are</Nav.Link>
-                <Nav.Link href="contact" style={{color: navColor}}>Contact Us</Nav.Link>
-                {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                <NavDropdown 
+                  title="About Us" 
+                  id="collasible-nav-dropdown"
+
+                  >
+                  <NavDropdown.Item href="impact">Impact</NavDropdown.Item>
+                  <NavDropdown.Item href="about">Who We Are</NavDropdown.Item>
+                  <NavDropdown.Item href="contact">Contact Us</NavDropdown.Item>
+                </NavDropdown>
+                {/* <NavDropdown 
+                  title="Programs" 
+                  id="collasible-nav-dropdown"
+
+                  >
+                  <NavDropdown.Item href="action-potential-initiative">Action Potential Initiative</NavDropdown.Item>
+                  <NavDropdown.Item href="about">Who We Are</NavDropdown.Item>
+                  <NavDropdown.Item href="news">Contact Us</NavDropdown.Item>
                 </NavDropdown> */}
+                <Nav.Link href="programs" className="nav-link">Programs</Nav.Link>
+                <Nav.Link href="opportunities" className="nav-link">Opportunities</Nav.Link>
+                <Nav.Link href="students-parents" className="nav-link">Students & Parents</Nav.Link>
+                {/* <Nav.Link href="about" className="nav-link">About Us</Nav.Link> */}
+                {/* <Nav.Link href="contact" className="nav-link">Contact Us</Nav.Link>/ */}
+                {/* <Nav.Link href="impact" className="nav-link">Impact</Nav.Link> */}
               </Nav>
               <Nav className="ml-auto">
-                <Nav.Link href="login" style={{color: navColor}}>Log In/Sign Up</Nav.Link>
+                <Nav.Link href="login" className="nav-link">Log In/Sign Up</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -42,3 +61,16 @@ export default function Navigation() {
     </div>
   )
 }
+
+{/* <NavDropdown 
+title="Programs" 
+id="collasible-nav-dropdown"
+className="dropdown-toggle disabled"
+href="programs"
+show={show}
+onMouseEnter={showDropdown} 
+onMouseLeave={hideDropdown}
+>
+<NavDropdown.Item href="action-potential-initiative">Action Potential Initiative</NavDropdown.Item>
+
+</NavDropdown> */}

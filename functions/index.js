@@ -8,6 +8,7 @@ const functions = require("firebase-functions");
 //   response.send("Hello from Firebase!");
 // });
 
+// modeled after https://betterprogramming.pub/a-simple-and-easy-contact-form-step-by-step-tutorial-react-js-1532bc025980
 // const functions = require('firebase-functions')
 const nodemailer = require('nodemailer')
 const cors = require('cors')({

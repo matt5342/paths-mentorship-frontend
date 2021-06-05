@@ -5,7 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 import acps_logo from '../assets/logos/acps_logo.png'; 
 import pgcps_logo from '../assets//logos/pgcps_logo.png'; 
 
-export default function WhoWeAre() {
+export default function AboutUs() {
   return (
     <div className="container">
         <Row className="justify-content-center">
@@ -82,7 +82,7 @@ export default function WhoWeAre() {
                 Dr. Linda Zanin, George Washington University<br></br>
                 Tricia Jacobs, ACPS Career and Technical Education<br></br>
                 Michele Coffman, ACPS Governor’s Health Sciences Academy<br></br>
-                Patrick Corr, George Washington University
+                Patrick Corr, George Washington University<br></br>
                 MediCorps Task Force
 
                 </p>
