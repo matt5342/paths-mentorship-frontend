@@ -1,5 +1,7 @@
 import React from 'react';
-import { Row, Image, Table } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
+import ProgramDevCards from './presentational/ProgramDevCards';
+import ProgramCareerCards from './presentational/ProgramCareerCards';
 import ProgramSlides from './presentational/ProgramSlides';
 import ProgramTable from './presentational/ProgramTable';
 import academic_success_icon from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/program_cards/academic_success_icon.png'
@@ -60,6 +62,60 @@ const dev_worshops_cards_info = [
     }
 
 ]
+const career_seminars_cards_info = [
+    {title: "Travel Nurse", 
+        bullets: [
+            "Katie Andrusaitis, RN, BSN",
+            "DNP Student, Arizona State University"
+        ]},
+    {title: "Speech and Language Pathologist",
+        bullets: [
+            "Dan Ginat, MA, CCC, SLP", 
+            "Cahon Valley Union School District",
+            "April Scatliffe, MA, CCC, SLP",
+            "San Diego Unified School District"
+        ]},
+    {title: "Clinical Athletic Trainer",
+        bullets: [
+            "Monica Macchiarulo", 
+            "Duke University Orthopedic Surgery"
+        ]},
+    {title: "Child Psychiatrist",
+        bullets: [
+            "Meghan Schott, DO", 
+            "Children's National Hospital"
+        ]},
+    {title: "EMT",
+        bullets: [
+            "Daniel Carrera, BS", 
+            "EMT and medical student, UCLA"
+        ]}, 
+    {title: "Public Health",
+        bullets: [
+            "Tooka Zokaie, MPH, CPH", 
+            "Preventative Health Manager, American Dental Association"
+        ]}, 
+    {title: "Neurosurgeon",
+        bullets: [
+            "Kareem Zaghloul, MD, PhD", 
+            "National Institutes of Health"
+        ]}, 
+    {title: "Physical Therapist",
+        bullets: [
+            "Kristen Quinn, DPT", 
+            "Neurologic Physical Therapy Specialist"
+        ]}, 
+    {title: "Oral Surgery Assistant",
+        bullets: [
+            "Jessica Aranibar, AS"
+        ]}, 
+    {title: "Nobel Prize Winning Scientist",
+        bullets: [
+            "Jennifer Doudna, PhD", 
+            "Professor of Biochemistry, UC Berkeley",
+            "Nobel Prize Winner in Chemistry, 2020"
+        ]}  
+]
 let count = 0;
 export default function Program() {
   return (
@@ -82,30 +138,16 @@ export default function Program() {
 
         <div className="container">
             <div className="row text-center">
-            {dev_worshops_cards_info.map((workshop) => {
-                return (
-                        <div className="col-md-4 d-flex card-container">
-                        <div className="card card-flip m-4">
-                            <div className="front card-block">
-                                <Image fluid width="50%" height="auto" className="img-responsive mx-auto" src={workshop.image}  alt="logo"/>
-                                <h5 className="card-title">{workshop.title}</h5>
-                                {/* <h6 className="card-subtitle text-muted">Front Sub-title</h6> */}
-                                {/* <p className="card-text">Front Text</p>  */}
-                            </div>
-                            <div className="back card-block">
-                                <h5 className="card-title"><strong>{workshop.title}</strong></h5>
-                                <Table striped bordered hover size="sm">
-                                    {/* <h6 className="text-left">Students Learned:</h6> */}
-                                    <th>Students Learned</th>
-                                    {workshop.bullets.map((bullet) => {
-                                        return <tr><td>{bullet}</td></tr>
-                                    })}
-                                </Table>
-                            </div>
-                        </div>
-                    </div>
-                )
-            })}
+                <ProgramDevCards card_info={dev_worshops_cards_info} />
+            </div>
+        </div>
+        <hr></hr>
+        <Row>
+            <h4>Career Seminars</h4>
+        </Row>
+        <div className="container">
+            <div className="row text-center">
+                <ProgramCareerCards card_info={career_seminars_cards_info} />
             </div>
         </div>
 
@@ -113,24 +155,3 @@ export default function Program() {
     </div>
   )
 }
-
-// {dev_worshops_cards_info.map((workshop) => {
-//     return (
-//         <Card style={{ width: '18rem' }} className="program-card m-2">
-//             <Card.Img variant="top" src={workshop.image} />
-//             <Card.Header>{workshop.title}</Card.Header>
-//             <Card.Body>
-//                 <Card.Text className="">
-//                     <ul>
-//                         {workshop.bullets.map((bullet) => {
-//                             return <li>{bullet}</li>
-//                         }
-//                         )}
-
-//                     </ul>
-
-//                 </Card.Text>
-//             </Card.Body>
-//         </Card>
-//     )
-// })}

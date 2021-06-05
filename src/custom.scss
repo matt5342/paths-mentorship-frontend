@@ -157,6 +157,7 @@ body {
 
 .card-flip .back {
   position: relative;
+  text-overflow: ellipsis;
   z-index: 0;
   transform: rotateY(-180deg);
 }
