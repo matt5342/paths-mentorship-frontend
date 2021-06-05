@@ -1,10 +1,11 @@
 import React from 'react';
-import { Carousel, Image, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import career_seminars from '../assets/program_slides/career_seminars.png'; 
 import dev_workshops from '../assets/program_slides/dev_workshops.png'; 
 import mentorship from '../assets/program_slides/mentorship.png'; 
 import science_project from '../assets/program_slides/science_project.png'; 
-import ProgramTable from './ProgramTable';
+import ProgramSlides from './presentational/ProgramSlides';
+import ProgramTable from './presentational/ProgramTable';
 
 const program_slides = [
     mentorship,  
@@ -18,23 +19,7 @@ export default function Program() {
     <div className="container">
         <h1>Programs</h1>
         <Row >
-            <Carousel className="myCarousel">
-                {program_slides.map((slide) => {
-                    return (
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={slide}
-                            alt="Slide"
-                            
-                            />
-                            <Carousel.Caption>
-                                {/* <h1>Title</h1> */}
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    )
-                })}
-            </Carousel>
+            <ProgramSlides />
         </Row>
         <br></br>
         <Row>

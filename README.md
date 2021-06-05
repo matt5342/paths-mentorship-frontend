@@ -5,9 +5,12 @@ A volunteer mentorship program that connects young biomedical professionals to h
 Live version: pathsmentorship.com
 
 -React Frontend
+
 -Styled with Bootstrap 5
+
 -Hosted with Firebase
--Contact us emails sent through Firebase
+
+-Contact us emails sent through Firebase Cloud Function
 
 Soon to be Java Spring Boot backend
 

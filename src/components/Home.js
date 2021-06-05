@@ -4,7 +4,7 @@ import temp_logo from '../assets/logos/temp_logo.png';
 import program_components_pie from '../assets/home/program_components_pie.png'; 
 import pgcps_year_end_report from '../assets/home/pgcps_year_end_report.png'; 
 import { Row, Col, Table, Image } from 'react-bootstrap';
-import ProgramTable from './ProgramTable';
+import ProgramTable from './presentational/ProgramTable';
 
 export default function Home() {
   return (
