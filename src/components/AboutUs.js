@@ -80,7 +80,7 @@ export default function AboutUs() {
             <Col>
                 <p>
                 Dr. Linda Zanin, George Washington University<br></br>
-                Tricia Jacobs, ACPS Career and Technical Education<br></br>
+                Dr. Tricia Jacobs, ACPS Career and Technical Education<br></br>
                 Michele Coffman, ACPS Governor’s Health Sciences Academy<br></br>
                 Patrick Corr, George Washington University<br></br>
                 MediCorps Task Force
