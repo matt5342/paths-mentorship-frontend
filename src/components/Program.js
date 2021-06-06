@@ -10,6 +10,7 @@ import college_app_icon from '/Users/mattsewell/Development/pathsmentorship/fron
 import college_readiness_icon from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/program_cards/college_readiness_icon.png'
 import summer_jobs_icon from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/program_cards/summer_jobs_icon.png'
 import wellness_check_icon from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/program_cards/wellness_check_icon.png'
+import ProgramBadges from './presentational/ProgramBadges';
 const dev_worshops_cards_info = [
     {title: "Academic Success in a Virtual World", 
         bullets: [
@@ -145,11 +146,14 @@ export default function Program() {
         <Row>
             <h4>Career Seminars</h4>
         </Row>
-        <div className="container">
+        {/* <div className="container">
             <div className="row text-center">
                 <ProgramCareerCards card_info={career_seminars_cards_info} />
             </div>
-        </div>
+        </div> */}
+        <Row>
+            <ProgramBadges card_info={career_seminars_cards_info} />
+        </Row>
 
 
     </div>
