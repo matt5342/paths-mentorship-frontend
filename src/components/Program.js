@@ -69,7 +69,7 @@ const career_seminars_cards_info = [
             "Katie Andrusaitis, RN, BSN",
             "DNP Student, Arizona State University"
         ]},
-    {title: "Speech and Language Pathologist",
+    {title: "Speech Language Pathologist",
         bullets: [
             "Dan Ginat, MA, CCC, SLP", 
             "Cahon Valley Union School District",
@@ -151,7 +151,7 @@ export default function Program() {
                 <ProgramCareerCards card_info={career_seminars_cards_info} />
             </div>
         </div> */}
-        <Row>
+        <Row className="container">
             <ProgramBadges card_info={career_seminars_cards_info} />
         </Row>
 

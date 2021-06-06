@@ -42,7 +42,7 @@ exports.submit = functions.https.onRequest((req, res) => {
         from: req.body.email,
         replyTo: req.body.email,
         to: gmailEmail,
-        subject: `${req.body.name} messaged us from PATHS Mentorship website`,
+        subject: `${req.body.name} messaged us about ${req.body.subject} from the PATHS website`,
         text: req.body.message,
         html: `<p>${req.body.message}</p>`,
       }

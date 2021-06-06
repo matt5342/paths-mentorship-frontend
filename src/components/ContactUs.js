@@ -5,6 +5,16 @@ import { Row, Col, Button } from 'react-bootstrap';
 const ContactForm = () => {
   const [formData, setFormData] = useState({})
 
+  const emailOptions = [
+    "General Question", 
+    "Student Question", 
+    "Parent Question", 
+    "Mentor Question", 
+    "Sponsors/Partners", 
+    "Career Seminar", 
+    "Action Potential Initiative"
+  ]
+
   const updateInput = e => {
     setFormData({
       ...formData,
@@ -17,6 +27,7 @@ const ContactForm = () => {
     setFormData({
       name: '',
       email: '',
+      subject: '',
       message: '',
     })
   }
@@ -49,6 +60,17 @@ const ContactForm = () => {
           <div className="form-group required">
             <label className="control-label">Email</label>
             <input onChange={updateInput} value={formData.email || ''} className="form-control" type="email" name="email" required="true"/>
+          </div>
+          <div className="form-group required">
+            <label className="control-label">Subject</label>
+            <select onChange={updateInput} value={formData.subject || ''} className="form-control" type="text" name="subject" required="true">
+              <option selected disabled label=" "></option>
+              {emailOptions.map((choice) => {
+                return (
+                  <option value={choice}>{choice}</option>
+                )
+              })}
+            </select>
           </div>
           <div className="form-group required">
             <label className="control-label">Message</label>

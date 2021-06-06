@@ -14,7 +14,7 @@ const ProgramBadges = ({card_info}) => {
                                     {/* <ul > */}
                                         {workshop.bullets.map((bullet) => {
                                             return (
-                                                <div className="p-1">{bullet}</div>
+                                                <div className="text-center p-1">{bullet}</div>
                                             )
                                         })}
 
@@ -22,9 +22,9 @@ const ProgramBadges = ({card_info}) => {
                                 </Popover>
                             }
                         >
-                            <h1 className="p-2">
-                                <span className='badge badge-primary p-4'>{workshop.title}</span>
-                            </h1>
+                            <h2 className="p-2">
+                                <span className='badge mx-responsive badge-primary p-4'>{workshop.title}</span>
+                            </h2>
 
                         </OverlayTrigger>
                     </div>
