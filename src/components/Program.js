@@ -1,7 +1,6 @@
 import React from 'react';
-import { Row } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import ProgramDevCards from './presentational/ProgramDevCards';
-import ProgramCareerCards from './presentational/ProgramCareerCards';
 import ProgramSlides from './presentational/ProgramSlides';
 import ProgramTable from './presentational/ProgramTable';
 import academic_success_icon from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/program_cards/academic_success_icon.png'
@@ -11,6 +10,10 @@ import college_readiness_icon from '/Users/mattsewell/Development/pathsmentorshi
 import summer_jobs_icon from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/program_cards/summer_jobs_icon.png'
 import wellness_check_icon from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/program_cards/wellness_check_icon.png'
 import ProgramBadges from './presentational/ProgramBadges';
+import ActionPotentialInitiative from './presentational/ActionPotentialInitiative';
+import Scrollspy from 'react-scrollspy';
+import TopicsScheduleCards from './presentational/TopicsScheduleCards';
+
 const dev_worshops_cards_info = [
     {title: "Academic Success in a Virtual World", 
         bullets: [
@@ -72,7 +75,7 @@ const career_seminars_cards_info = [
     {title: "Speech Language Pathologist",
         bullets: [
             "Dan Ginat, MA, CCC, SLP", 
-            "Cahon Valley Union School District",
+            "Cajon Valley Union School District",
             "April Scatliffe, MA, CCC, SLP",
             "San Diego Unified School District"
         ]},
@@ -117,6 +120,14 @@ const career_seminars_cards_info = [
             "Nobel Prize Winner in Chemistry, 2020"
         ]}  
 ]
+const topics_schedule_cards_info = [
+    {date: "November", topic: "Question"},
+    {date: "December", topic: "Hypothesis"},
+    {date: "January", topic: "Experiment"},
+    {date: "February", topic: "Data + Analyze"},
+    {date: "March", topic: "Report"},
+    {date: "April", topic: "Science Project Day"},
+]
 let count = 0;
 export default function Program() {
   return (
@@ -125,27 +136,37 @@ export default function Program() {
         <Row >
             <ProgramSlides />
         </Row>
+        {/* <Scrollspy items={ ['section-1', 'section-2', 'section-3'] } currentClassName="is-current">
+            <li><a href="#section-1">section 1</a></li>
+        </Scrollspy> */}
+        
         <br></br>
         <Row>
             <ProgramTable />
         </Row>
         <hr></hr><br></br>
         <Row>
-            <h2>2020-2021</h2>
+            <h2><strong>2020-2021</strong></h2>
         </Row>
+        <br></br>
+
+        {/* <section id="section-1">
+        </section> */}
+
+        <h4><strong>Development Workshops</strong></h4>
+        <hr className="hr-programs"></hr>
         <Row>
-            <h4>Development Workshops</h4>
+            <div className="container">
+                <div className="row text-center">
+                    <ProgramDevCards card_info={dev_worshops_cards_info} />
+                </div>
+            </div>
         </Row>
 
-        <div className="container">
-            <div className="row text-center">
-                <ProgramDevCards card_info={dev_worshops_cards_info} />
-            </div>
-        </div>
         <hr></hr>
-        <Row>
-            <h4>Career Seminars</h4>
-        </Row>
+        <h4><strong>Career Seminars</strong></h4>
+        <hr className="hr-programs"></hr>
+        <br></br>
         {/* <div className="container">
             <div className="row text-center">
                 <ProgramCareerCards card_info={career_seminars_cards_info} />
@@ -154,8 +175,64 @@ export default function Program() {
         <Row className="container">
             <ProgramBadges card_info={career_seminars_cards_info} />
         </Row>
+        <hr></hr>
+        <h4><strong>Action Potential Initiative</strong></h4>
+        <hr className="hr-programs"></hr>
+        <br></br>
+        <Row>
+            <ActionPotentialInitiative />
+        </Row>
+        <br></br>
+        <Row className="justify-content-center">
+            <h4 className="">Topics Schedule</h4>
+        </Row>
+        <Row className="justify-content-center ">
+            <TopicsScheduleCards card_info={topics_schedule_cards_info} />
+        </Row>
+        <br></br>
+        <Row>
+            <Col className="col-sm-1 arrow-bullet">➤</Col>
+            <Col className="col-sm-10">
+                <p>
+                    This <strong> new competitive program</strong> will have a separate application process and will be supplemental
+                     to the development workshops. <strong> Mentors will serve as a "research advisor"</strong> as students create
+                      their own scientific question, collect background information, perform an experiment,
+                       and report their findings through a <strong>3-5 page report</strong> and  
+                       <strong> poster presentation</strong>.
 
-
+                </p>
+            </Col>
+        </Row>
+        <Row>
+            <Col className="col-sm-1 arrow-bullet">➤</Col>
+            <Col className="col-sm-10">
+                <p>
+                    This could count as <strong> research experience</strong> on a resume, provides 
+                    a <strong> writing sample</strong> for 
+                    college applications, and prepares students for future research projects.
+                </p>
+            </Col>
+        </Row>
+        <Row>
+            <Col className="col-sm-1 arrow-bullet">➤</Col>
+            <Col className="col-sm-10">
+                <p>
+                    Students will choose their own topic, and will be <strong>guided through each step of the 
+                    scientific method</strong> as they slowly build their project. Students may independently
+                    coordinate with their teachers to make the project part of a classroom assignment. 
+                    We will encourage students to reach out to their teachers to discuss these options.
+                </p>
+            </Col>
+        </Row>
+        <Row>
+            <Col className="col-sm-1 arrow-bullet">➤</Col>
+            <Col className="col-sm-10">
+                <p>
+                    The project culminates in a <strong>presentation day </strong>in which students will share 
+                    their findings with their peers, parents, and mentors in the form of a poster.
+                </p>
+            </Col>
+        </Row>
     </div>
   )
 }

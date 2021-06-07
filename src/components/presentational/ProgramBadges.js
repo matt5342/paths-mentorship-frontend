@@ -8,6 +8,7 @@ const ProgramBadges = ({card_info}) => {
                 return (
                     <div>
                         <OverlayTrigger
+                            placement="auto" 
                             overlay={
                                 <Popover className="p-2" id={workshop.title}>
                                     <Popover.Title className="text-center">Speaker(s)</Popover.Title>

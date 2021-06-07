@@ -1,7 +1,7 @@
 import React from 'react';
 import group_collab from '../assets/home/group_collab.png'; 
 import temp_logo from '../assets/logos/temp_logo.png'; 
-import program_components_pie from '../assets/home/program_components_pie.png'; 
+import pathway from '../assets/home/pathway.png'; 
 import pgcps_year_end_report from '../assets/home/pgcps_year_end_report.png'; 
 import { Row, Col, Table, Image } from 'react-bootstrap';
 import ProgramTable from './presentational/ProgramTable';
@@ -34,7 +34,7 @@ export default function Home() {
         <hr></hr>
         <br></br>
         <Row className="text-center">
-            <Image fluid width="800px" height="auto" className="img-responsive mx-auto" src={program_components_pie}  alt="logo"/>
+            <Image fluid width="60%" height="auto" className="img-responsive mx-auto" src={pathway}  alt="logo"/>
         </Row>
         <br></br>
         <br></br>

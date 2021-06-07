@@ -7,33 +7,37 @@ import science_project from '/Users/mattsewell/Development/pathsmentorship/front
 
 
 const program_slides = [
-    mentorship,  
-    dev_workshops,  
-    science_project,  
-    career_seminars  
+    {title: "Mentorship",
+        image: mentorship},  
+    {title: "Development Workshops", 
+        image: dev_workshops},  
+    {title: "Action Potential Initiative", 
+        image: science_project},
+    {title: "Career Seminars", 
+        image: career_seminars}
 ]
 
 const  ProgramSlides =() => {
   return (
     <div>
 
-            <Carousel className="myCarousel">
-                {program_slides.map((slide) => {
-                    return (
-                        <Carousel.Item>
-                            <img
-                            className="d-block w-100"
-                            src={slide}
-                            alt="Slide"
-                            
-                            />
-                            <Carousel.Caption>
-                                {/* <h1>Title</h1> */}
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    )
-                })}
-            </Carousel>
+        <Carousel className="myCarousel">
+            {program_slides.map((slide) => {
+                return (
+                    <Carousel.Item>
+                        <img
+                        className="d-block w-100"
+                        src={slide.image}
+                        alt="Slide"
+                        
+                        />
+                        {/* <Carousel.Caption>
+                            <h3>{slide.title}</h3>
+                        </Carousel.Caption> */}
+                    </Carousel.Item>
+                )
+            })}
+        </Carousel>
     </div>
   )
 }

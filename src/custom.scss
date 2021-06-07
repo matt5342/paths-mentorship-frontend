@@ -2,6 +2,7 @@
 // $body-bg: rgb(72, 94, 168);
 $enable-gradients: true;
 $body-bg: #c3d2f4ff;
+$primary: #5a87cb;
 // $body-bg: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,210,246,1) 0%, rgba(79,126,196,1) 100%);
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
@@ -29,6 +30,28 @@ body {
     height: auto;
     width: auto;
     overflow: hidden;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '❯';
+  font-size: 60px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '❮';
+  font-size: 60px;
+  color: black;
 }
 
 .column {
@@ -164,4 +187,21 @@ body {
 
 .card-container:hover .card-flip {
   transform: rotateY(180deg);
+}
+// end card flip
+
+.hr-programs {
+  border: 2px solid $primary;
+  margin: 1px;
+}
+
+.card-topic {
+  height: 150px;
+  width: 150px;
+  background-color: $primary;
+  color: white;
+}
+.arrow-bullet {
+  font-size: 40px;
+  color: #ffe599;
 }
