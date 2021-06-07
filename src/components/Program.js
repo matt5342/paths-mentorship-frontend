@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import ProgramDevCards from './presentational/ProgramDevCards';
 import ProgramSlides from './presentational/ProgramSlides';
 import ProgramTable from './presentational/ProgramTable';
@@ -225,7 +225,7 @@ export default function Program() {
             </Col>
         </Row>
         <Row>
-            <Col className="col-sm-1 arrow-bullet">➤</Col>
+            <Col className=" arrow-bullet">➤</Col>
             <Col className="col-sm-10">
                 <p>
                     The project culminates in a <strong>presentation day </strong>in which students will share 

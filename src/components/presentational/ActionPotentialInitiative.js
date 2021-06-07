@@ -5,17 +5,15 @@ import api_venn from '/Users/mattsewell/Development/pathsmentorship/frontend/pat
 
 export default function ActionPotentialInitiative() {
   return (
-    // <div className="container text-center">
-        // <h2><strong>Our Impact</strong></h2>
+
       <>
-        <Col>
+        <Col sm={6}>
             <Image fluid width="auto" height="auto" className="img-responsive mx-auto" src={api_venn}  alt="logo"/>
         </Col>
-        <Col>
+        <Col sm={6}>
             <Image fluid width="80%" height="auto" className="img-responsive mx-auto" src={api_venn_text}  alt="logo"/>
         </Col>
       </>
-    // </div>
 
   )
 
