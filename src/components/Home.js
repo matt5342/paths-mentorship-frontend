@@ -15,6 +15,7 @@ export default function Home() {
         <Row className="justify-content-center">
             <p>Formerly the Biomedical Mentorship Program</p>
         </Row>
+        
         <hr></hr>
         <Row className="text-center">
             <Image fluid width="800px" height="auto" className="img-responsive mx-auto" src={group_collab}  alt="logo"/>

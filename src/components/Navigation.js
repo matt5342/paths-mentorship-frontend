@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Navbar, Nav, Container, Image, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, Container, Image, NavDropdown, Button } from 'react-bootstrap'
 import temp_logo from '../assets/logos/temp_logo.png'; 
-import { withRouter } from 'react-router-dom';
+import GoFundMe_logo from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/logos/GoFundMe_logo.svg'
 
 
 export default function Navigation() {
@@ -53,6 +53,16 @@ export default function Navigation() {
               </Nav>
               <Nav className="ml-auto">
                 <Nav.Link href="login" className="nav-link">Log In/Sign Up</Nav.Link>
+              </Nav>
+              <Nav className="ml-auto">
+                <Button href="https://www.gofundme.com/f/paths-mentorship?utm_source=widget&utm_medium=referral&utm_campaign=p_cp+share-sheet" 
+                        variant="warning" style={{'fontSize': '15px'}}>
+                        <Image fluid width="60px" 
+                          height="auto" 
+                          className="img-responsive mx-auto" 
+                          src={GoFundMe_logo}  alt="donate"/><br></br>
+                          Donate Now
+                </Button>
               </Nav>
             </Navbar.Collapse>
           </Container>

@@ -18,6 +18,11 @@ function App() {
   return (
     <div className="wrapper">
       <Navigation />
+      <div className="container">
+        
+
+      </div>
+      
       <br></br><br></br>
       <BrowserRouter>
         <Switch>
