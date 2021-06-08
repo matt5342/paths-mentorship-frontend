@@ -75,7 +75,7 @@ export default function AboutUs() {
                     <strong>Alison Bashford</strong>, Administrative Secretary<br></br>
                     <strong>Katherine Degner</strong>, Development Workshop Coordinator<br></br>
                     <strong>Surina Patel</strong>, Development Workshop Coordinator<br></br>
-                    <strong>Meghan Schott</strong>, Development Workshop Coordinator
+                    <strong>Dr. Meghan Schott</strong>, Development Workshop Coordinator
                 </p>
             </Col>
         </Row>
@@ -106,7 +106,7 @@ export default function AboutUs() {
                 <p>
                 Dr. Linda Zanin, George Washington University<br></br>
                 Dr. Tricia Jacobs, ACPS Career and Technical Education<br></br>
-                Michele Coffman, ACPS Governor’s Health Sciences Academy<br></br>
+                Michele Coffman, Laura Evans, ACPS Governor’s Health Sciences Academy<br></br>
                 Patrick Corr, George Washington University<br></br>
                 MediCorps Task Force
 
