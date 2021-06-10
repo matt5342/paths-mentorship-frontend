@@ -31,9 +31,9 @@ const  ProgramSlides =() => {
                         alt="Slide"
                         
                         />
-                        {/* <Carousel.Caption>
-                            <h3>{slide.title}</h3>
-                        </Carousel.Caption> */}
+                        <Carousel.Caption>
+                            <p>{slide.title}</p>
+                        </Carousel.Caption>
                     </Carousel.Item>
                 )
             })}

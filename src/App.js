@@ -8,9 +8,10 @@ import ContactForm from './components/ContactUs'
 import Opportunities from './components/Opportunities';
 import StudentsParents from './components/StudentsParents';
 import LogIn from './components/LogIn';
-import SignUp from './components/SignUp';
+import Register from './components/Register';
 import AboutUs from './components/AboutUs';
 import Impact from './components/Impact';
+import Profile from './components/Profile';
 
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
           <Route exact path="/contact" component={ContactForm} />
           <Route exact path="/students-parents" component={StudentsParents} />
           <Route exact path="/login" component={LogIn} />
-          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/signup" component={Register} />
+          <Route exact path="/profile" component={Profile} />
           
         </Switch>
 

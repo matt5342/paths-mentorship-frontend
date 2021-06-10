@@ -5,8 +5,29 @@ import pathway from '../assets/home/pathway.png';
 import pgcps_year_end_report from '../assets/home/pgcps_year_end_report.png'; 
 import { Row, Col, Table, Image } from 'react-bootstrap';
 import ProgramTable from './presentational/ProgramTable';
+import { useState, useEffect } from "react";
+import UserService from "../services/user.service";
 
 export default function Home() {
+
+    const [content, setContent] = useState("");
+
+    useEffect(() => {
+      UserService.getPublicContent().then(
+        (response) => {
+          setContent(response.data);
+        },
+        (error) => {
+          const _content =
+            (error.response && error.response.data) ||
+            error.message ||
+            error.toString();
+  
+          setContent(_content);
+        }
+      );
+    }, []);
+
   return (
     <div className="container">   
         <Row className="justify-content-center">
