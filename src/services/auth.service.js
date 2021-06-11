@@ -16,16 +16,16 @@ const register = (accessCode, username, email, password, firstName, lastName) =>
 const login = (username, password) => {
 	return axios.post(API_URL + "signin", {
 		username,
-		password
+		password,
 	})
 	.then((response) => {
 		if (response.data.acessToken) {
-			localStorage.setItem("user", JSON.stringify(response.data))
+			localStorage.setItem("user", JSON.stringify(response.data));
 		}
 
-		return response.data
-	})
-}
+		return response.data;
+	});
+};
 
 const logout = () => {
 	localStorage.removeItem("user")

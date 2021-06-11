@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Axios } from '../firebase/firebaseConfig'
-import { Row, Col, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 // modeled after https://betterprogramming.pub/a-simple-and-easy-contact-form-step-by-step-tutorial-react-js-1532bc025980
 const ContactForm = () => {
   const [formData, setFormData] = useState({})
