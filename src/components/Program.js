@@ -128,7 +128,7 @@ const topics_schedule_cards_info = [
     {date: "March", topic: "Report"},
     {date: "April", topic: "Science Project Day"},
 ]
-let count = 0;
+
 export default function Program() {
   return (
     <div className="container">

@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 const Profile = () => {
   const { user: currentUser } = useSelector((state) => state.auth);
+  console.log("Profile component currentUser: ")
   console.log(currentUser)
   if (!currentUser) {
     return <Redirect to="/login" />;
@@ -16,7 +17,7 @@ const Profile = () => {
           <strong>{currentUser.username}</strong> Profile
         </h3>
       </header>
-      <p>
+      {/* <p>
         <strong>Token:</strong> {currentUser.accessToken.substring(0, 20)} ...{" "}
         {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}
       </p>
@@ -30,7 +31,7 @@ const Profile = () => {
       <ul>
         {currentUser.roles &&
           currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-      </ul>
+      </ul> */}
     </div>
   );
 };

@@ -4,7 +4,9 @@ const initialState = {};
 
 export default function (state = initialState, action) {
 	const { type, payload } = action;
-
+	console.log("In message reducer")
+	console.log("type: " + type)
+	console.log("payload: " + payload)
 	switch (type) {
 		case SET_MESSAGE:
 			return { message: payload };

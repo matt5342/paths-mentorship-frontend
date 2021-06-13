@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+// import { Card } from 'react-bootstrap';
 
 const TopicsScheduleCards = ({card_info}) => {
     return (

@@ -9,37 +9,37 @@ import { history } from "../helpers/history";
 
 
 export default function Navigation() {
-  const [show, setShow] = useState(false);
-  const showDropdown = (e)=>{
-      console.log(e);
-      setShow(!show);
-  }
-  const hideDropdown = e => {
-      setShow(false);
-  }
-  // const [showMentorBoard, setShowMentorBoard] = useState(false);
+  // const [show, setShow] = useState(false);
+  // const showDropdown = (e)=>{
+  //     console.log(e);
+  //     setShow(!show);
+  // }
+  // const hideDropdown = e => {
+  //     setShow(false);
+  // }
+  // // const [showMentorBoard, setShowMentorBoard] = useState(false);
 
-  const [showAdminBoard, setShowAdminBoard] = useState(false);
+  // const [showAdminBoard, setShowAdminBoard] = useState(false);
 
-  const { user: currentUser } = useSelector((state) => state.auth);
-  const dispatch = useDispatch();
+  // const { user: currentUser } = useSelector((state) => state.auth);
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    history.listen((location) => {
-      dispatch(clearMessage()); // clear message when changing location
-    });
-  }, [dispatch]);
+  // useEffect(() => {
+  //   history.listen((location) => {
+  //     dispatch(clearMessage()); // clear message when changing location
+  //   });
+  // }, [dispatch]);
 
-  useEffect(() => {
-    if (currentUser) {
-      // setShowMenttorBoard(currentUser.roles.includes("ROLE_MENTOR"));
-      setShowAdminBoard(currentUser.roles.includes("ROLE_ADMIN"));
-    }
-  }, [currentUser]);
+  // useEffect(() => {
+  //   if (currentUser) {
+  //     // setShowMenttorBoard(currentUser.roles.includes("ROLE_MENTOR"));
+  //     setShowAdminBoard(currentUser.roles.includes("ROLE_ADMIN"));
+  //   }
+  // }, [currentUser]);
 
-  const logOut = () => {
-    dispatch(logout());
-  };
+  // const logOut = () => {
+  //   dispatch(logout());
+  // };
 
   return (
     <div className="">
@@ -74,7 +74,7 @@ export default function Navigation() {
                 <Nav.Link href="programs" className="nav-link">Programs</Nav.Link>
                 <Nav.Link href="opportunities" className="nav-link">Opportunities</Nav.Link>
                 <Nav.Link href="students-parents" className="nav-link">Students & Parents</Nav.Link>
-                {showAdminBoard && <Nav.Link href="admin" className="nav-link">Admin Board</Nav.Link>}
+                {/* {showAdminBoard && <Nav.Link href="admin" className="nav-link">Admin Board</Nav.Link>} */}
               </Nav>
               <Nav className="ml-auto">
                 <Nav.Link href="login" className="nav-link">Log In/Sign Up</Nav.Link>

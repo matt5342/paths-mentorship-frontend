@@ -20,14 +20,16 @@ const login = (username, password) => {
 	})
 	.then((response) => {
 		if (response.data.acessToken) {
+			console.log("got response: " + response.data.accessToken)
 			localStorage.setItem("user", JSON.stringify(response.data));
-		}
+		} else {console.log("no response" + response)}
 
 		return response.data;
 	});
 };
 
 const logout = () => {
+	console.log("in logout")
 	localStorage.removeItem("user")
 }
 

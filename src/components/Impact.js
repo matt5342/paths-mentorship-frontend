@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Row, Col } from 'react-bootstrap';
+import { Image, Row } from 'react-bootstrap';
 import impact_20_21 from '../assets/impact/impact_20_21.png'; 
 
 export default function Impact() {

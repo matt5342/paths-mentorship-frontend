@@ -43,21 +43,21 @@ export const register = (accessCode, username, firstName, lastName, email, passw
 				return Promise.reject();
 			}
 			);
-		};
+};
 		
-		export const login = (username, password) => (dispatch) => {
-			return AuthService.login(username, password).then(
-				(data) => {
-					console.log(data)
-					dispatch({
-						type: LOGIN_SUCCESS,
-			payload: { user: data },
+export const login = (username, password) => (dispatch) => {
+	return AuthService.login(username, password).then(
+		(data) => {
+			// console.log(data)
+			dispatch({
+				type: LOGIN_SUCCESS,
+				payload: { user: data },
 		});
-		console.log(Promise)
+		// console.log(Promise)
 		return Promise.resolve();
 	},
 	(error) => {
-		console.log(error)
+		// console.log(error)
 		const message =
 			(error.response && error.response.data && error.response.data.message)
 			|| error.message || error.toString();
@@ -77,6 +77,7 @@ export const register = (accessCode, username, firstName, lastName, email, passw
 };
       
 export const logout = () => (dispatch) => {
+	console.log("in auth logout")
 	AuthService.logout();
 
 	dispatch({
