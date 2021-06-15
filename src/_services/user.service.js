@@ -1,5 +1,6 @@
 // import config from 'config';
 import { authHeader } from '../_helpers/auth-header';
+import axios from 'axios';
 
 const BASE_URL = 'http://localhost:8080'
 
@@ -54,13 +55,28 @@ function getById(id) {
 }
 
 function register(user) {
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(user)
-    };
+    // console.log(user.accessCode)
+    const { accessCode, firstName, lastName, email, username, password } = user
+    
+    return axios.post(`${BASE_URL}/api/auth/signup`, {
+        accessCode,
+        firstName,
+        lastName,
+        email,
+        username,
+        password
+    })
+    // .then(handleResponse);
 
-    return fetch(`${BASE_URL}/api/aith/signup`, requestOptions).then(handleResponse);
+    // // console.log(accessCode)
+    // const requestOptions = {
+    //     mode: 'no-cors',
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json'},
+    //     body: JSON.stringify({accessCode, firstName, lastName, email, username, password})
+    // };
+
+    // return fetch(`${BASE_URL}/api/auth/signup`, requestOptions)
 }
  
 function update(user) {
@@ -70,7 +86,7 @@ function update(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`${BASE_URL}/users/${user.id}`, requestOptions).then(handleResponse);;
+    return fetch(`${BASE_URL}/users/${user.id}`, requestOptions).then(handleResponse);
 }
 
 // prefixed function name with underscore because delete is a reserved word in javascript

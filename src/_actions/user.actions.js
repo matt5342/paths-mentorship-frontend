@@ -47,11 +47,17 @@ function register(user) {
                 user => { 
                     dispatch(success());
                     history.push('/login');
-                    dispatch(alertActions.success('Registration successful'));
+                    dispatch(alertActions.success('Registration successful! Please log in.'));
                 },
                 error => {
+                    const message =
+                    (error.response &&
+                      error.response.data &&
+                      error.response.data.message) ||
+                    error.message ||
+                    error.toString();
                     dispatch(failure(error.toString()));
-                    dispatch(alertActions.error(error.toString()));
+                    dispatch(alertActions.error(message));
                 }
             );
     };
