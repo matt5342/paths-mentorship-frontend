@@ -11,8 +11,9 @@ import NavBottom from './components/NavBottom'
 import ContactForm from './components/ContactUs'
 import Opportunities from './components/Opportunities';
 import StudentsParents from './components/StudentsParents';
-import LogIn from './components/LogIn';
-import SignUp from './components/SignUp';
+import Login from './components/Login';
+// import SignUp from './components/SignUp';
+import SignUp from './components/forms/SignUpForm';
 import AboutUs from './components/AboutUs';
 import Impact from './components/Impact';
 
@@ -51,7 +52,7 @@ function App() {
           <Route exact path="/about" component={AboutUs} />
           <Route exact path="/contact" component={ContactForm} />
           <Route exact path="/students-parents" component={StudentsParents} />
-          <Route exact path="/login" component={LogIn} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           
         </Switch>

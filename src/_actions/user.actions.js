@@ -22,8 +22,15 @@ function login(username, password, from) {
                     history.push(from);
                 },
                 error => {
+                    const message =
+                    (error.response &&
+                      error.response.data &&
+                      error.response.data.message) ||
+                    error.message ||
+                    error.toString();
                     dispatch(failure(error.toString()));
-                    dispatch(alertActions.error(error.toString()));
+                    console.log(message)
+                    dispatch(alertActions.error("Invalid username or password."));
                 }
             );
     };

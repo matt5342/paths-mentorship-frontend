@@ -206,3 +206,11 @@ body {
   color: #ffe599;
   max-width: 50px;
 }
+
+input.invalid {
+  border-color: red;
+}
+
+input {
+  max-width: 400px;
+}

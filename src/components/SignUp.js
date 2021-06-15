@@ -83,7 +83,14 @@ function SignUp() {
                     }
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary">
+                    <label>Confirm Password</label>
+                    <input type="password" name="password" value={user.password} onChange={handleChange} className={'form-control' + (submitted && !user.password ? ' is-invalid' : '')} />
+                    {submitted && !user.password &&
+                        <div className="invalid-feedback">Password is required</div>
+                    }
+                </div>
+                <div className="form-group">
+                    <button className="btn btn-primary ">
                         {registering && <span className="spinner-border spinner-border-sm mr-1"></span>}
                         Register
                     </button>

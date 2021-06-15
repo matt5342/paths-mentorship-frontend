@@ -101,17 +101,17 @@ function _delete(id) {
 
 function handleResponse(response) {
     return response.text().then(text => {
-		console.log(BASE_URL)
+		// console.log(BASE_URL)
 		console.log(text)
         const data = text && JSON.parse(text);
         if (!response.ok) {
             if (response.status === 401) {
                 // auto logout if 401 response returned from api
                 logout();
-                Location.reload(true);
+                // window.location.reload();
             }
 
-            const error = (data && data.message) || response.statusText;
+            const error = (data && data.error) || response.statusText;
             return Promise.reject(error);
         }
 
