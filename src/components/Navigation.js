@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Navbar, Nav, Container, Image, NavDropdown, Button } from 'react-bootstrap'
 import temp_logo from '../assets/logos/temp_logo.png'; 
 import GoFundMe_logo from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/logos/GoFundMe_logo.svg'
-
+import { useDispatch } from 'react-redux';
+import { userActions } from '../_actions/user.actions';
 
 export default function Navigation() {
+
+  const currentUser = useSelector((state) => state.authentication.user)
+  const dispatch = useDispatch();
+
+  const logout = () => { 
+      dispatch(userActions.logout()); 
+  }
+
   const [show, setShow] = useState(false);
   const showDropdown = (e)=>{
       console.log(e);
@@ -35,24 +45,22 @@ export default function Navigation() {
                   <NavDropdown.Item href="about">Who We Are</NavDropdown.Item>
                   <NavDropdown.Item href="contact">Contact Us</NavDropdown.Item>
                 </NavDropdown>
-                {/* <NavDropdown 
-                  title="Programs" 
-                  id="collasible-nav-dropdown"
 
-                  >
-                  <NavDropdown.Item href="action-potential-initiative">Action Potential Initiative</NavDropdown.Item>
-                  <NavDropdown.Item href="about">Who We Are</NavDropdown.Item>
-                  <NavDropdown.Item href="news">Contact Us</NavDropdown.Item>
-                </NavDropdown> */}
                 <Nav.Link href="programs" className="nav-link">Programs</Nav.Link>
                 <Nav.Link href="opportunities" className="nav-link">Opportunities</Nav.Link>
                 <Nav.Link href="students-parents" className="nav-link">Students & Parents</Nav.Link>
-                {/* <Nav.Link href="about" className="nav-link">About Us</Nav.Link> */}
-                {/* <Nav.Link href="contact" className="nav-link">Contact Us</Nav.Link>/ */}
-                {/* <Nav.Link href="impact" className="nav-link">Impact</Nav.Link> */}
+
               </Nav>
               <Nav className="ml-auto">
-                <Nav.Link href="login" className="nav-link">Log In/Sign Up</Nav.Link>
+                {
+                  currentUser ? 
+                  <Nav>
+                    <Nav.Link href="profile" className="nav-link">{currentUser.username}</Nav.Link>
+                    <Nav.Link onClick={logout} className="nav-link">Logout</Nav.Link>
+                   </Nav>
+                  : <Nav.Link href="login" className="nav-link">Log In</Nav.Link>
+                }
+                {/* <Nav.Link href="login" className="nav-link">Log In/Sign Up</Nav.Link> */}
               </Nav>
               <Nav className="ml-auto">
                 <Button href="https://www.gofundme.com/f/paths-mentorship?utm_source=widget&utm_medium=referral&utm_campaign=p_cp+share-sheet" 

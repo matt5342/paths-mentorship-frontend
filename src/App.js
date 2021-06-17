@@ -16,6 +16,7 @@ import Login from './components/Login';
 import SignUp from './components/forms/SignUpForm';
 import AboutUs from './components/AboutUs';
 import Impact from './components/Impact';
+import Profile from './components/Profile';
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
           <Route exact path="/students-parents" component={StudentsParents} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/profile" component={Profile} />
           
         </Switch>
 

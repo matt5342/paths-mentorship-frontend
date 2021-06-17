@@ -62,6 +62,9 @@ function SignUp() {
             <Form className="col-lg-5 offset-lg-3 ">
 				<div className="text-center">
                     <h2 className="">Sign Up</h2>
+					<p><small>If you are a program participant, check your email for an access code. 
+						If you did not recieve an access code, please <a href="/contact">Contact Us</a>
+					</small></p>
                 </div>
                 <div className="form-group">
                     <label htmlFor="accessCode">Access Code</label>

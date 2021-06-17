@@ -65,6 +65,7 @@ export default function AboutUs() {
                     <strong>Erin Fingleton</strong>, Development Workshop Coordinator<br></br>
                     <strong>Bruny Kenou</strong>, Tutoring Coordinator<br></br>
                     <strong>Ruby Lam</strong>, Development Workshop Coordinator<br></br>
+                    <strong>Dan Moyer</strong>, Development Workshop Coordinator<br></br>
                     <strong>Matthew Nebiyou</strong>, Development Workshop Coordinator<br></br>
                     <strong>Adit Sabnis</strong>, Career Seminar Coordinator
                 </p>

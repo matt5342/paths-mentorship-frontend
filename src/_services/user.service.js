@@ -15,20 +15,28 @@ export const userService = {
 };
 
 function login(username, password) {
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
-    };
+    // const requestOptions = {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ username, password })
+    // };
 
-    return fetch(`${BASE_URL}/api/auth/signin`, requestOptions)
-        .then(handleResponse)
-        .then(user => {
-            // store user details and jwt token in local storage to keep user logged in between page refreshes
-            localStorage.setItem('user', JSON.stringify(user));
+    return axios.post(`${BASE_URL}/api/auth/signin`, { username, password })
+    .then((response) => {
+        if (response.data.accessToken) {
+          localStorage.setItem("user", JSON.stringify(response.data));
+        }
+  
+        return response.data;
+      });
+    // return fetch(`${BASE_URL}/api/auth/signin`, requestOptions)
+    //     .then(handleResponse)
+    //     .then(user => {
+    //         // store user details and jwt token in local storage to keep user logged in between page refreshes
+    //         localStorage.setItem('user', JSON.stringify(user));
 
-            return user;
-        });
+    //         return user;
+    //     });
 }
 
 function logout() {
@@ -100,21 +108,24 @@ function _delete(id) {
 }
 
 function handleResponse(response) {
-    return response.text().then(text => {
-		// console.log(BASE_URL)
-		console.log(text)
-        const data = text && JSON.parse(text);
-        if (!response.ok) {
-            if (response.status === 401) {
-                // auto logout if 401 response returned from api
-                logout();
-                // window.location.reload();
-            }
+    if (response.data.accessToken) {
+        localStorage.setItem("user", JSON.stringify(response.data))
+    }
+    // return response.text().then(text => {
+	// 	// console.log(BASE_URL)
+	// 	// console.log(text)
+    //     const data = text && JSON.parse(text);
+    //     if (!response.ok) {
+    //         if (response.status === 401) {
+    //             // auto logout if 401 response returned from api
+    //             logout();
+    //             // window.location.reload();
+    //         }
 
-            const error = (data && data.error) || response.statusText;
-            return Promise.reject(error);
-        }
+    //         const error = (data && data.error) || response.statusText;
+    //         return Promise.reject(error);
+    //     }
 
-        return data;
-    });
+    //     return data;
+    // });
 }
