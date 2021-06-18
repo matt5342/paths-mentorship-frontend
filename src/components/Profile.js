@@ -33,7 +33,7 @@ const Profile = () => {
 						)}
 					<hr></hr>
 
-					<Button variant="primary">Go somewhere</Button>
+					{/* <Button variant="primary">Go somewhere</Button> */}
 				</Card.Body>
 			</Card>
 		</div>

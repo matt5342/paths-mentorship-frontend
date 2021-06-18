@@ -2,7 +2,8 @@
 import { authHeader } from '../_helpers/auth-header';
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080'
+// const BASE_URL = 'http://localhost:8080'
+const BASE_URL = 'https://paths-mentorship.herokuapp.com'
 
 export const userService = {
     login,

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { userActions } from '../_actions/user.actions';
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -8,6 +8,7 @@ import * as Yup from "yup";
 function Login() {
 
     const [submitted, setSubmitted] = useState(false);
+    const loggingIn = useSelector(state => state.authentication.loggingIn);
 
     const dispatch = useDispatch();
     const location = useLocation();
@@ -72,7 +73,9 @@ function Login() {
                     <ErrorMessage name="password" />
                 </div>
                 <div className="text-center">
-                    <button className="btn btn-primary centered" type="submit">Submit</button>
+                    <button className="btn btn-primary centered" type="submit">
+                    {loggingIn && <span className="spinner-border spinner-border-sm mr-1"></span>}
+                    Submit</button>
                     <br></br><br></br>
                     <p>Don't have an account? <a href="signup">Sign up</a></p>
                 </div>

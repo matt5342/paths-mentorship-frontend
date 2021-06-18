@@ -28,7 +28,7 @@ export default function Navigation() {
     <div className="">
 
 
-        <Navbar collapseOnSelect expand="lg" className="color-nav" variant="light">
+        <Navbar collapseOnSelect fixed="top" expand="lg" className="color-nav" variant="light">
           <Container className="nav-container">
             <Navbar.Brand href="home">
                 <Image fluid width="200px" height="auto" className="img-responsive" src={temp_logo} alt="logo" />

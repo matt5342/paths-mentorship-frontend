@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { userActions } from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/_actions/user.actions.js';
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -8,6 +8,7 @@ import * as Yup from "yup";
 function SignUp() {
 
     const [submitted, setSubmitted] = useState(false);
+    const registering = useSelector(state => state.registration.registering);
 
     const dispatch = useDispatch();
     const location = useLocation();
@@ -144,7 +145,9 @@ function SignUp() {
                     <ErrorMessage name="confirmPassword" />
                 </div>
 				<div className="text-center">
-                    <button className="btn btn-primary centered" type="submit">Submit</button>
+                    <button className="btn btn-primary centered" type="submit">
+                    {registering && <span className="spinner-border spinner-border-sm mr-1"></span>}
+                    Submit</button>
                     <br></br><br></br>
                     <p>Already have an account? <a href="login">Log In</a></p>
                 </div>
