@@ -17,7 +17,7 @@ import SignUp from './components/forms/SignUpForm';
 import AboutUs from './components/AboutUs';
 import Impact from './components/Impact';
 import Profile from './components/Profile';
-import AdminPanel from './components/AdminPanel';
+// import AdminPanel from './components/AdminPanel';
 
 
 function App() {
