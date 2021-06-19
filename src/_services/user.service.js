@@ -9,6 +9,7 @@ export const userService = {
     login,
     logout,
     register,
+    getAdminPanel,
     getAll,
     getById,
     update,
@@ -87,7 +88,10 @@ function register(user) {
 
     // return fetch(`${BASE_URL}/api/auth/signup`, requestOptions)
 }
- 
+
+function getAdminPanel() {
+    return axios.get(`${BASE_URL}/api/test/admin`, { headers: authHeader() })
+}
 function update(user) {
     const requestOptions = {
         method: 'PUT',

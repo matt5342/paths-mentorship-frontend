@@ -17,6 +17,7 @@ import SignUp from './components/forms/SignUpForm';
 import AboutUs from './components/AboutUs';
 import Impact from './components/Impact';
 import Profile from './components/Profile';
+import AdminPanel from './components/AdminPanel';
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/profile" component={Profile} />
+          {/* <Route exact path="/admin" component={AdminPanel} /> */}
           
         </Switch>
 
