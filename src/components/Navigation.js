@@ -9,6 +9,7 @@ import { userActions } from '../_actions/user.actions';
 export default function Navigation() {
 
   const currentUser = useSelector((state) => state.authentication.user)
+  const loggedIn = useSelector((state) => state.authentication.loggedIn)
   const dispatch = useDispatch();
 
   const logout = () => { 
@@ -49,18 +50,21 @@ export default function Navigation() {
                 <Nav.Link href="programs" className="nav-link">Programs</Nav.Link>
                 <Nav.Link href="opportunities" className="nav-link">Opportunities</Nav.Link>
                 <Nav.Link href="students-parents" className="nav-link">Students & Parents</Nav.Link>
+                {loggedIn && currentUser.roles.includes("ROLE_ADMIN") ? 
+                  <Nav.Link href="admin" className="nav-link">Admin Panel</Nav.Link>
+                  : null
+                }
 
               </Nav>
               <Nav className="ml-auto">
                 {
-                  currentUser ? 
+                  currentUser  ? 
                   <Nav>
                     <Nav.Link href="profile" className="nav-link">{currentUser.username}</Nav.Link>
                     <Nav.Link onClick={logout} className="nav-link">Logout</Nav.Link>
                    </Nav>
                   : <Nav.Link href="login" className="nav-link">Log In</Nav.Link>
                 }
-                {/* <Nav.Link href="login" className="nav-link">Log In/Sign Up</Nav.Link> */}
               </Nav>
               <Nav className="ml-auto">
                 <Button href="https://www.gofundme.com/f/paths-mentorship?utm_source=widget&utm_medium=referral&utm_campaign=p_cp+share-sheet" 

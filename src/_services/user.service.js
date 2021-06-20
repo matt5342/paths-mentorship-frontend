@@ -1,15 +1,16 @@
 // import config from 'config';
 import { authHeader } from '../_helpers/auth-header';
 import axios from 'axios';
+import { history } from '../_helpers/history';
 
-// const BASE_URL = 'http://localhost:8080'
-const BASE_URL = 'https://paths-mentorship.herokuapp.com'
+
+const BASE_URL = 'http://localhost:8080'
+// const BASE_URL = 'https://paths-mentorship.herokuapp.com'
 
 export const userService = {
     login,
     logout,
     register,
-    getAdminPanel,
     getAll,
     getById,
     update,
@@ -17,42 +18,28 @@ export const userService = {
 };
 
 function login(username, password) {
-    // const requestOptions = {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ username, password })
-    // };
-
     return axios.post(`${BASE_URL}/api/auth/signin`, { username, password })
     .then((response) => {
         if (response.data.accessToken) {
           localStorage.setItem("user", JSON.stringify(response.data));
         }
-  
         return response.data;
       });
-    // return fetch(`${BASE_URL}/api/auth/signin`, requestOptions)
-    //     .then(handleResponse)
-    //     .then(user => {
-    //         // store user details and jwt token in local storage to keep user logged in between page refreshes
-    //         localStorage.setItem('user', JSON.stringify(user));
-
-    //         return user;
-    //     });
 }
 
 function logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('user');
+    history.push("/")
 }
 
 function getAll() {
-    const requestOptions = {
-        method: 'GET',
-        headers: authHeader()
-    };
+    return axios.get(`${BASE_URL}/api/users`, { headers: authHeader() })
+    // .then((response) => {
+    //     console.log("response: ")
+    //     console.log(response.data)
 
-    return fetch(`${BASE_URL}/users`, requestOptions).then(handleResponse);
+    // })
 }
 
 function getById(id) {
@@ -65,7 +52,6 @@ function getById(id) {
 }
 
 function register(user) {
-    // console.log(user.accessCode)
     const { accessCode, firstName, lastName, email, username, password } = user
     
     return axios.post(`${BASE_URL}/api/auth/signup`, {
@@ -76,22 +62,8 @@ function register(user) {
         username,
         password
     })
-    // .then(handleResponse);
-
-    // // console.log(accessCode)
-    // const requestOptions = {
-    //     mode: 'no-cors',
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json'},
-    //     body: JSON.stringify({accessCode, firstName, lastName, email, username, password})
-    // };
-
-    // return fetch(`${BASE_URL}/api/auth/signup`, requestOptions)
 }
 
-function getAdminPanel() {
-    return axios.get(`${BASE_URL}/api/test/admin`, { headers: authHeader() })
-}
 function update(user) {
     const requestOptions = {
         method: 'PUT',
@@ -104,21 +76,26 @@ function update(user) {
 
 // prefixed function name with underscore because delete is a reserved word in javascript
 function _delete(id) {
-    const requestOptions = {
-        method: 'DELETE',
-        headers: authHeader()
-    };
 
-    return fetch(`${BASE_URL}/users/${id}`, requestOptions).then(handleResponse);
+    return axios.delete(`${BASE_URL}/users/${id}`, { headers: authHeader() })
+    // const requestOptions = {
+    //     method: 'DELETE',
+    //     headers: authHeader()
+    // };
+
+    // return fetch(`${BASE_URL}/users/${id}`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {
     if (response.data.accessToken) {
         localStorage.setItem("user", JSON.stringify(response.data))
     }
+    // else{
+    //     return response.data.then (text => {
+    //         const data = text && JSON.parse(text)
+    //     })
+    // }
     // return response.text().then(text => {
-	// 	// console.log(BASE_URL)
-	// 	// console.log(text)
     //     const data = text && JSON.parse(text);
     //     if (!response.ok) {
     //         if (response.status === 401) {

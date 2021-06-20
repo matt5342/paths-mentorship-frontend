@@ -25,6 +25,9 @@ function App() {
   const alert = useSelector(state => state.alert);
   const dispatch = useDispatch();
 
+	const currentUser = useSelector((state) => state.authentication.user)
+	const loggedIn = useSelector((state) => state.authentication.loggedIn)
+
   useEffect(() => {
       history.listen((location, action) => {
           // clear alert on location change
@@ -42,12 +45,12 @@ function App() {
         
 
       </div>
-      
+
       <br></br><br></br>
       <Router history={history}>
         <Switch>
-          <Route exact path="/home" component={Home} />
           <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/programs" component={Program} />
           <Route exact path="/opportunities" component={Opportunities} />
           <Route exact path="/impact" component={Impact} />
@@ -57,7 +60,9 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/profile" component={Profile} />
-          {/* <Route exact path="/admin" component={AdminPanel} /> */}
+          <Route exact path="/admin">
+            {loggedIn && currentUser.roles.includes("ROLE_ADMIN") ? <AdminPanel /> : <Login/>}  
+          </Route> 
           
         </Switch>
 
