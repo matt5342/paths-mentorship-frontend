@@ -30,16 +30,10 @@ function login(username, password) {
 function logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('user');
-    history.push("/")
 }
 
 function getAll() {
     return axios.get(`${BASE_URL}/api/users`, { headers: authHeader() })
-    // .then((response) => {
-    //     console.log("response: ")
-    //     console.log(response.data)
-
-    // })
 }
 
 function getById(id) {
@@ -76,14 +70,7 @@ function update(user) {
 
 // prefixed function name with underscore because delete is a reserved word in javascript
 function _delete(id) {
-
-    return axios.delete(`${BASE_URL}/users/${id}`, { headers: authHeader() })
-    // const requestOptions = {
-    //     method: 'DELETE',
-    //     headers: authHeader()
-    // };
-
-    // return fetch(`${BASE_URL}/users/${id}`, requestOptions).then(handleResponse);
+    return axios.delete(`${BASE_URL}/api/users/${id}`, { headers: authHeader() })
 }
 
 function handleResponse(response) {

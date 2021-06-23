@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Axios } from '../firebase/firebaseConfig'
-import { Row, Col, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 // modeled after https://betterprogramming.pub/a-simple-and-easy-contact-form-step-by-step-tutorial-react-js-1532bc025980
 const ContactForm = () => {
   const [formData, setFormData] = useState({})
@@ -82,29 +82,4 @@ const ContactForm = () => {
   )
 }
 export default ContactForm
-/* // <div className="container">
-//   <form onSubmit={handleSubmit}>
-//     <input
-//       type="text"
-//       name="name"
-//       placeholder="Name"
-//       onChange={updateInput}
-//       value={formData.name || ''}
-//     />
-//     <input
-//       type="email"
-//       name="email"
-//       placeholder="Email"
-//       onChange={updateInput}
-//       value={formData.email || ''}
-//     />
-//     <textarea
-//       type="text"
-//       name="message"
-//       placeholder="Message"
-//       onChange={updateInput}
-//       value={formData.message || ''}
-//     ></textarea>
-//     <button type="submit">Submit</button>
-//   </form>
-// </div> */
+

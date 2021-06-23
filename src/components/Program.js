@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import ProgramDevCards from './presentational/ProgramDevCards';
 import ProgramSlides from './presentational/ProgramSlides';
 import ProgramTable from './presentational/ProgramTable';
@@ -11,7 +11,7 @@ import summer_jobs_icon from '/Users/mattsewell/Development/pathsmentorship/fron
 import wellness_check_icon from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/program_cards/wellness_check_icon.png'
 import ProgramBadges from './presentational/ProgramBadges';
 import ActionPotentialInitiative from './presentational/ActionPotentialInitiative';
-import Scrollspy from 'react-scrollspy';
+// import Scrollspy from 'react-scrollspy';
 import TopicsScheduleCards from './presentational/TopicsScheduleCards';
 
 const dev_worshops_cards_info = [
@@ -128,7 +128,7 @@ const topics_schedule_cards_info = [
     {date: "March", topic: "Report"},
     {date: "April", topic: "Science Project Day"},
 ]
-let count = 0;
+
 export default function Program() {
   return (
     <div className="container">

@@ -13,7 +13,7 @@ import Opportunities from './components/Opportunities';
 import StudentsParents from './components/StudentsParents';
 import Login from './components/Login';
 // import SignUp from './components/SignUp';
-import SignUp from './components/forms/SignUpForm';
+import SignUp from './components/SignUp';
 import AboutUs from './components/AboutUs';
 import Impact from './components/Impact';
 import Profile from './components/Profile';
@@ -33,7 +33,7 @@ function App() {
           // clear alert on location change
           dispatch(alertActions.clear());
       });
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="wrapper">
@@ -59,9 +59,11 @@ function App() {
           <Route exact path="/students-parents" component={StudentsParents} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/profile">
+            {loggedIn ? <Profile/> : <Redirect to="/login"/>}
+          </Route>
           <Route exact path="/admin">
-            {loggedIn && currentUser.roles.includes("ROLE_ADMIN") ? <AdminPanel /> : <Login/>}  
+            {loggedIn && currentUser.roles.includes("ROLE_ADMIN") ? <AdminPanel /> : <Redirect to="/login"/>}  
           </Route> 
           
         </Switch>

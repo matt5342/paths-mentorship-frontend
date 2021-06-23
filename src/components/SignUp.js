@@ -1,104 +1,161 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { userActions } from '../_actions/user.actions'
+import { userActions } from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/_actions/user.actions.js';
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 function SignUp() {
-    const [user, setUser] = useState({
-        accessCode: '',
-        firstName: '',
-        lastName: '',
-        email: '',
-        username: '',
-        password: ''
-    });
+
     const [submitted, setSubmitted] = useState(false);
     const registering = useSelector(state => state.registration.registering);
+
     const dispatch = useDispatch();
+    const location = useLocation();
 
     // reset login status
-    useEffect(() => {
-        dispatch(userActions.logout());
-    }, []);
+    useEffect(() => { 
+        dispatch(userActions.logout()); 
+    }, [dispatch]);
 
-    function handleChange(e) {
-        const { name, value } = e.target;
-        setUser(user => ({ ...user, [name]: value }));
-    }
-
-    function handleSubmit(e) {
-        e.preventDefault();
-
+	function handleSubmit(values) {
         setSubmitted(true);
-        if (user.accessCode && user.firstName && user.lastName && user.email && user.username && user.password) {
-            dispatch(userActions.register(user));
+        if (values.accessCode && values.firstName && values.lastName && values.username && values.password) {
+            dispatch(userActions.register(values));
         }
     }
 
-    return (
-        <div className="col-lg-8 offset-lg-2">
-            <h2>Register</h2>
-            <form name="form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label>Access Code</label>
-                    <input type="text" name="accessCode" value={user.accessCode} onChange={handleChange} className={'form-control' + (submitted && !user.accessCode ? ' is-invalid' : '')} />
-                    {submitted && !user.accessCode &&
-                        <div className="invalid-feedback">Access Code is required</div>
-                    }
+	return (
+        <div className="container">
+            <Formik
+                initialValues={{accessCode: '',
+					firstName: '', lastName: '',
+					email: '', username: '', 
+					password: '', confirmPassword: ''}}
+                validationSchema={Yup.object({
+					accessCode: Yup.string()
+						.required("Required"),
+					firstName: Yup.string()
+						.max(30, "Must be 30 characters or less")
+						.required("Required"),
+					lastName: Yup.string()
+						.max(30, "Must be 30 characters or less")
+						.required("Required"),
+					email: Yup.string()
+						.email("Invalid email address")
+						.required("Required"),
+                    username: Yup.string()
+						.max(20, "Must be 20 characters or less")
+						.required("Required"),
+                    password: Yup.string() 
+						.max(120, "Must be 120 characters or less")
+						.min(8, "Must be at least 8 characters")
+						.required("Required"),
+					confirmPassword: Yup.string()
+						.oneOf([Yup.ref('password'), null], "Passwords must match")
+                })}
+                onSubmit={(values) => {
+                    setTimeout(() => {
+                        handleSubmit(values);
+                    }, 400)
+                }}
+                >
+            <Form className="col-lg-5 offset-lg-3 ">
+				<div className="text-center">
+                    <h2 className="">Sign Up</h2>
+					<p><small>If you are a program participant, check your email for an access code. 
+						If you did not recieve an access code, please <a href="/contact">Contact Us</a>
+					</small></p>
                 </div>
                 <div className="form-group">
-                    <label>First Name</label>
-                    <input type="text" name="firstName" value={user.firstName} onChange={handleChange} className={'form-control' + (submitted && !user.firstName ? ' is-invalid' : '')} />
-                    {submitted && !user.firstName &&
-                        <div className="invalid-feedback">First Name is required</div>
-                    }
+                    <label htmlFor="accessCode">Access Code</label>
+                    <Field name="accessCode" type="text">
+                        { ({ 
+                        field, 
+                        meta: { touched, error } 
+                        }) => <input className={ touched && error ? "invalid form-control" : "form-control" } { ...field } />
+                        }
+                    </Field>
+                    <ErrorMessage name="accessCode" className="is-invalid invalid-feedback" />
                 </div>
                 <div className="form-group">
-                    <label>Last Name</label>
-                    <input type="text" name="lastName" value={user.lastName} onChange={handleChange} className={'form-control' + (submitted && !user.lastName ? ' is-invalid' : '')} />
-                    {submitted && !user.lastName &&
-                        <div className="invalid-feedback">Last Name is required</div>
-                    }
+                    <label htmlFor="firstName">First Name</label>
+                    <Field name="firstName" type="text">
+                        { ({ 
+                        field, 
+                        meta: { touched, error } 
+                        }) => <input className={ touched && error ? "invalid form-control" : "form-control" } { ...field } />
+                        }
+                    </Field>
+                    <ErrorMessage name="firstName" className="is-invalid invalid-feedback" />
                 </div>
                 <div className="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" value={user.email} onChange={handleChange} className={'form-control' + (submitted && !user.email ? ' is-invalid' : '')} />
-                    {submitted && !user.email &&
-                        <div className="invalid-feedback">Email is required</div>
-                    }
+                    <label htmlFor="lastName">Last Name</label>
+                    <Field name="lastName" type="text">
+                        { ({ 
+                        field, 
+                        meta: { touched, error } 
+                        }) => <input className={ touched && error ? "invalid form-control" : "form-control" } { ...field } />
+                        }
+                    </Field>
+                    <ErrorMessage name="lastName" className="is-invalid invalid-feedback" />
                 </div>
                 <div className="form-group">
-                    <label>Username</label>
-                    <input type="text" name="username" value={user.username} onChange={handleChange} className={'form-control' + (submitted && !user.username ? ' is-invalid' : '')} />
-                    {submitted && !user.username &&
-                        <div className="invalid-feedback">Username is required</div>
-                    }
+                    <label htmlFor="email">Email</label>
+                    <Field name="email" type="email">
+                        { ({ 
+                        field, 
+                        meta: { touched, error } 
+                        }) => <input type="email" className={ touched && error ? "invalid form-control" : "form-control" } { ...field } />
+                        }
+                    </Field>
+                    <ErrorMessage name="email" className="is-invalid invalid-feedback" />
                 </div>
                 <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" name="password" value={user.password} onChange={handleChange} className={'form-control' + (submitted && !user.password ? ' is-invalid' : '')} />
-                    {submitted && !user.password &&
-                        <div className="invalid-feedback">Password is required</div>
-                    }
+                    <label htmlFor="username">Username</label>
+                    <Field name="username" type="text">
+                        { ({ 
+                        field, 
+                        meta: { touched, error } 
+                        }) => <input className={ touched && error ? "invalid form-control" : "form-control" } { ...field } />
+                        }
+                    </Field>
+                    <ErrorMessage name="username" className="is-invalid invalid-feedback" />
                 </div>
                 <div className="form-group">
-                    <label>Confirm Password</label>
-                    <input type="password" name="password" value={user.password} onChange={handleChange} className={'form-control' + (submitted && !user.password ? ' is-invalid' : '')} />
-                    {submitted && !user.password &&
-                        <div className="invalid-feedback">Password is required</div>
-                    }
+                    <label htmlFor="password">Password</label>
+                    <Field name="password" type="password" >
+                        { ({ 
+                        field, 
+                        meta: { touched, error } 
+                        }) => <input type="password" className={ touched && error ? "invalid form-control" : "form-control" } { ...field } />
+                        }
+                    </Field>
+                    <ErrorMessage name="password" />
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary ">
-                        {registering && <span className="spinner-border spinner-border-sm mr-1"></span>}
-                        Register
-                    </button>
-                    <Link to="/login" className="btn btn-link">Cancel</Link>
+                    <label htmlFor="confirmPassword">Confirm Password</label>
+                    <Field name="confirmPassword" type="password" >
+                        { ({ 
+                        field, 
+                        meta: { touched, error } 
+                        }) => <input type="password" className={ touched && error ? "invalid form-control" : "form-control" } { ...field } />
+                        }
+                    </Field>
+                    <ErrorMessage name="confirmPassword" />
                 </div>
-            </form>
+				<div className="text-center">
+                    <button className="btn btn-primary centered" type="submit">
+                    {registering && <span className="spinner-border spinner-border-sm mr-1"></span>}
+                    Submit</button>
+                    <br></br><br></br>
+                    <p>Already have an account? <a href="login">Log In</a></p>
+                </div>
+            </Form>
+            </Formik>
         </div>
-    );
-}
+	)
 
+}
+ 
 export default SignUp;

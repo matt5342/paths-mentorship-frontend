@@ -3,7 +3,7 @@ import group_collab from '../assets/home/group_collab.png';
 import temp_logo from '../assets/logos/temp_logo.png'; 
 import pathway from '../assets/home/pathway.png'; 
 import pgcps_year_end_report from '../assets/home/pgcps_year_end_report.png'; 
-import { Row, Col, Table, Image } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap';
 import ProgramTable from './presentational/ProgramTable';
 
 export default function Home() {

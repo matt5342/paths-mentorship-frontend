@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 const Profile = () => {
 	// console.log(useSelector(state => state.authentication.user))

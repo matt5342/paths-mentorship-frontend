@@ -16,14 +16,14 @@ export default function Navigation() {
       dispatch(userActions.logout()); 
   }
 
-  const [show, setShow] = useState(false);
-  const showDropdown = (e)=>{
-      console.log(e);
-      setShow(!show);
-  }
-  const hideDropdown = e => {
-      setShow(false);
-  }
+  // const [show, setShow] = useState(false);
+  // const showDropdown = (e)=>{
+  //     console.log(e);
+  //     setShow(!show);
+  // }
+  // const hideDropdown = e => {
+  //     setShow(false);
+  // }
 
   return (
     <div className="">
@@ -83,16 +83,3 @@ export default function Navigation() {
     </div>
   )
 }
-
-{/* <NavDropdown 
-title="Programs" 
-id="collasible-nav-dropdown"
-className="dropdown-toggle disabled"
-href="programs"
-show={show}
-onMouseEnter={showDropdown} 
-onMouseLeave={hideDropdown}
->
-<NavDropdown.Item href="action-potential-initiative">Action Potential Initiative</NavDropdown.Item>
-
-</NavDropdown> */}
