@@ -5,6 +5,10 @@ import website_vertical from '../assets/opportunities/website_vertical.png';
 export default function Opportunities() {
   return (
     <div className="container">
+        <Row className="justify-content-center">
+            <h2 className=""><strong>Opportunities</strong></h2>
+        </Row>
+        <br></br>
         <Row>
             <Col>
                 <Accordion defaultActiveKey="0" >

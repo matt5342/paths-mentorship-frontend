@@ -28,7 +28,7 @@ export default function AboutUs() {
         </Row>
         <Row className="justify-content-center text-center">
             <Col>
-                <img width="400px" height="auto" className="img-responsive mx-auto" src={mor_alkaslasi}  alt="logo"/>
+                <img width="70%" height="auto" className="img-responsive mx-auto" src={mor_alkaslasi}  alt="logo"/>
                 <br></br>
                 <p>
                     <br></br>
@@ -41,7 +41,7 @@ export default function AboutUs() {
                 </p>
             </Col>
             <Col>
-                <img width="400px" height="auto" className="img-responsive mx-auto" src={brittany_sincox}  alt="logo"/>
+                <img width="70%" height="auto" className="img-responsive mx-auto" src={brittany_sincox}  alt="logo"/>
                 <br></br>
                 <p>
                     <br></br>
@@ -81,39 +81,42 @@ export default function AboutUs() {
             </Col>
         </Row>
         <hr></hr>
-        <Row className="">
-            <h4><strong>With Support From:</strong></h4>
+        <Row className="justify-content-center">
+            <h4><strong>With Support From</strong></h4>
         </Row>
-        <Row>
-            <Col className="col-md-3">
-                <img width="150px" height="auto" className="img-responsive mx-auto" src={pgcps_logo}  alt="logo"/>
-            </Col>
-            <Col>
-                <p>
-                Dr. Jamie Hill-Daniel, Georgetown University<br></br>
-                Dr. Herbert Geller, National Institutes of Health<br></br>
-                Darlene Bruton, Dr. Regina Spruill, Melynda Maynard, PGCPS Career and Technical Education<br></br>
-                PGCPS Health and Biosciences Advisory Committee<br></br>
+        <br></br>
+        <Row className="justify-content-center">
+            <Col className="col-md-2 " />
+            <Row>
+                <Col className="text-center" sm={6}>
+                    <img width="150px" height="auto" className="img-responsive mx-auto" src={pgcps_logo}  alt="logo"/>
+                </Col>
+                <Col sm={6} className="">
+                    <p>
+                        Dr. Jamie Hill-Daniel, Georgetown University<br></br>
+                        Dr. Herbert Geller, National Institutes of Health<br></br>
+                        Darlene Bruton, Dr. Regina Spruill, Melynda Maynard, PGCPS Career and Technical Education<br></br>
+                        PGCPS Health and Biosciences Advisory Committee<br></br>
+                    </p>
+                    <br></br>
+                </Col>
 
-                </p>
-            </Col>
+                <Col className="text-center" sm={6}>
+                    <img width="150px" height="auto" className="img-responsive mx-auto" src={acps_logo}  alt="logo"/>
+                </Col>
+                <Col sm={6} className="">
+                    <p>
+                        Dr. Linda Zanin, George Washington University<br></br>
+                        Dr. Tricia Jacobs, ACPS Career and Technical Education<br></br>
+                        Michele Coffman, Laura Evans, ACPS Governor’s Health Sciences Academy<br></br>
+                        Patrick Corr, George Washington University<br></br>
+                        MediCorps Task Force
+                    </p>
+                </Col>
+            </Row>
         </Row>
         <br></br><hr></hr>
-        <Row>
-            <Col className="col-md-3">
-                <img width="150px" height="auto" className="img-responsive mx-auto" src={acps_logo}  alt="logo"/>
-            </Col>
-            <Col>
-                <p>
-                Dr. Linda Zanin, George Washington University<br></br>
-                Dr. Tricia Jacobs, ACPS Career and Technical Education<br></br>
-                Michele Coffman, Laura Evans, ACPS Governor’s Health Sciences Academy<br></br>
-                Patrick Corr, George Washington University<br></br>
-                MediCorps Task Force
 
-                </p>
-            </Col>
-        </Row>
     </div>
   )
 }

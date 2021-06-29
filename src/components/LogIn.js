@@ -16,7 +16,7 @@ function Login() {
     // reset login status
     useEffect(() => { 
         dispatch(userActions.logout()); 
-    }, []);
+    }, [dispatch]);
 
     function handleSubmit(values) {
         setSubmitted(true);

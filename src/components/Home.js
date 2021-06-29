@@ -1,22 +1,14 @@
 import React from 'react';
 import group_collab from '../assets/home/group_collab.png'; 
-import temp_logo from '../assets/logos/temp_logo.png'; 
+import bio_logo1 from '../assets/logos/bio_logo1.png'; 
 import pathway from '../assets/home/pathway.png'; 
 import pgcps_year_end_report from '../assets/home/pgcps_year_end_report.png'; 
-import { Row, Col, Table, Image } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap';
 import ProgramTable from './presentational/ProgramTable';
 
 export default function Home() {
   return (
     <div className="container">   
-        <Row className="justify-content-center">
-        <Image fluid width="800px" height="auto" className="img-responsive mx-auto" src={temp_logo}  alt="logo"/>
-        </Row>
-        <Row className="justify-content-center">
-            <p>Formerly the Biomedical Mentorship Program</p>
-        </Row>
-        
-        <hr></hr>
         <Row className="text-center">
             <Image fluid width="800px" height="auto" className="img-responsive mx-auto" src={group_collab}  alt="logo"/>
         </Row>

@@ -13,7 +13,7 @@ import Opportunities from './components/Opportunities';
 import StudentsParents from './components/StudentsParents';
 import Login from './components/Login';
 // import SignUp from './components/SignUp';
-import SignUp from './components/forms/SignUpForm';
+import SignUp from './components/SignUp';
 import AboutUs from './components/AboutUs';
 import Impact from './components/Impact';
 import Profile from './components/Profile';
@@ -25,29 +25,33 @@ function App() {
   const alert = useSelector(state => state.alert);
   const dispatch = useDispatch();
 
+	const currentUser = useSelector((state) => state.authentication.user)
+	const loggedIn = useSelector((state) => state.authentication.loggedIn)
+
   useEffect(() => {
       history.listen((location, action) => {
           // clear alert on location change
           dispatch(alertActions.clear());
       });
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="wrapper">
       <Navigation />
+      <br></br><br></br><br></br>
       <div className="container">
         {alert.message &&
-          <div className={`alert ${alert.type}`}>{alert.message}</div>
+          <div className={`alert ${alert.type}`}><br></br>{alert.message}</div>
         }
         
 
       </div>
-      
+
       <br></br><br></br>
       <Router history={history}>
         <Switch>
-          <Route exact path="/home" component={Home} />
           <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/programs" component={Program} />
           <Route exact path="/opportunities" component={Opportunities} />
           <Route exact path="/impact" component={Impact} />
@@ -56,8 +60,12 @@ function App() {
           <Route exact path="/students-parents" component={StudentsParents} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/profile" component={Profile} />
-          {/* <Route exact path="/admin" component={AdminPanel} /> */}
+          <Route exact path="/profile">
+            {loggedIn ? <Profile/> : <Redirect to="/login"/>}
+          </Route>
+          <Route exact path="/admin">
+            {loggedIn && currentUser.roles.includes("ROLE_ADMIN") ? <AdminPanel /> : <Redirect to="/login"/>}  
+          </Route> 
           
         </Switch>
 
