@@ -7,8 +7,8 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function NavBottom() {
-    const rerouteToLinkedin = () => window.open('https://www.instagram.com/biomedmentors/', "_blank")
-    const rerouteToInstagram = () => window.open('https://www.instagram.com/biomedmentors/', "_blank")
+    const rerouteToLinkedin = () => window.open('https://www.instagram.com/pathsmentorship/', "_blank")
+    const rerouteToInstagram = () => window.open('https://www.instagram.com/pathsmentorship/', "_blank")
     const rerouteToGithub = () => window.open('https://github.com/matt5342', "_blank")
 
   return (
@@ -39,36 +39,11 @@ export default function NavBottom() {
                                     </Col>
                                 </Row>
                             </div>
-                          {/* <h3>About</h3>
-                          <ul>
-                              <li><a href="home">Home</a></li>
-                              <li><a href="programs">Programs</a></li>
-                              <li><a href="impact">Impact</a></li>
-                              <li><a href="opportunities">Opportunities</a></li>
-                              <li><a href="students-parents">Students + Parents</a></li>
-                              <li><a href="about">Who we are</a></li>
-                              <li><a href="contact">Contact Us</a></li>
-                          </ul> */}
                       </Col>
-
-                        {/* <div className="col-sm-6 col-md-3 item text-center">
-                          <h3 className="">Follow Us</h3>
-                          <div className="col item social "><a onClick={rerouteToLinkedin}><i className="icon ion-social-linkedin"></i></a><a onClick={rerouteToInstagram}><i className="icon ion-social-instagram"></i></a></div>
-
-                          <ul>
-                            <li>
-                                <a  style={{"cursor": "pointer"}} onClick={rerouteToInstagram}>Instagram</a>
-                            </li>
-                            <li >
-                                <a style={{"cursor": "pointer"}} onClick={rerouteToLinkedin}>LinkedIn</a>
-                            </li>
-                          </ul>
-                      </div> */}
-                      {/* <div className="col item social"><a onClick={rerouteToLinkedin}><i className="icon ion-social-linkedin"></i></a><a onClick={rerouteToInstagram}><i className="icon ion-social-instagram"></i></a></div> */}
                   </Row>
                   <Col sm={6} md={4}/>
                     <Col className="item social">
-                        <a onClick={rerouteToLinkedin}><i className="icon ion-social-linkedin"><FontAwesomeIcon icon={faLinkedin}/></i></a>
+                        {/* <a onClick={rerouteToLinkedin}><i className="icon ion-social-linkedin"><FontAwesomeIcon icon={faLinkedin}/></i></a> */}
                         <a onClick={rerouteToInstagram}><i className="icon ion-social-instagram"><FontAwesomeIcon icon={faInstagram}/></i></a>
                     </Col>
                   <p className="copyright">

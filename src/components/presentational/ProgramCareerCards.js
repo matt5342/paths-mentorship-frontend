@@ -12,7 +12,6 @@ const ProgramCareerCards = ({card_info}) => {
                                 <h2 className="card-title">{workshop.title}</h2>
                             </div>
                             <div className="back card-block">
-                                {/* <h5 className="card-title"><strong>{workshop.title}</strong></h5> */}
                                 <Table size="sm">
                                     <th>Speaker(s)</th>
                                     {workshop.bullets.map((bullet) => {

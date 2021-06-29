@@ -93,11 +93,10 @@ export default function AboutUs() {
                 </Col>
                 <Col sm={6} className="">
                     <p>
-                    Dr. Jamie Hill-Daniel, Georgetown University<br></br>
-                    Dr. Herbert Geller, National Institutes of Health<br></br>
-                    Darlene Bruton, Dr. Regina Spruill, Melynda Maynard, PGCPS Career and Technical Education<br></br>
-                    PGCPS Health and Biosciences Advisory Committee<br></br>
-
+                        Dr. Jamie Hill-Daniel, Georgetown University<br></br>
+                        Dr. Herbert Geller, National Institutes of Health<br></br>
+                        Darlene Bruton, Dr. Regina Spruill, Melynda Maynard, PGCPS Career and Technical Education<br></br>
+                        PGCPS Health and Biosciences Advisory Committee<br></br>
                     </p>
                     <br></br>
                 </Col>
@@ -107,12 +106,11 @@ export default function AboutUs() {
                 </Col>
                 <Col sm={6} className="">
                     <p>
-                    Dr. Linda Zanin, George Washington University<br></br>
-                    Dr. Tricia Jacobs, ACPS Career and Technical Education<br></br>
-                    Michele Coffman, Laura Evans, ACPS Governor’s Health Sciences Academy<br></br>
-                    Patrick Corr, George Washington University<br></br>
-                    MediCorps Task Force
-
+                        Dr. Linda Zanin, George Washington University<br></br>
+                        Dr. Tricia Jacobs, ACPS Career and Technical Education<br></br>
+                        Michele Coffman, Laura Evans, ACPS Governor’s Health Sciences Academy<br></br>
+                        Patrick Corr, George Washington University<br></br>
+                        MediCorps Task Force
                     </p>
                 </Col>
             </Row>

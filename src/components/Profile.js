@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { Card } from "react-bootstrap";
 
 const Profile = () => {
-	// console.log(useSelector(state => state.authentication.user))
+
 	const currentUser = useSelector((state) => state.authentication.user)
 	if (!currentUser){
 		return <Redirect to="/login" />
@@ -32,8 +32,6 @@ const Profile = () => {
 						  <Card.Text className="text-left" key={index}>{role.charAt(5) + role.slice(6).toLowerCase()}</Card.Text>
 						)}
 					<hr></hr>
-
-					{/* <Button variant="primary">Go somewhere</Button> */}
 				</Card.Body>
 			</Card>
 		</div>

@@ -9,14 +9,6 @@ import ProgramTable from './presentational/ProgramTable';
 export default function Home() {
   return (
     <div className="container">   
-        {/* <Row className="justify-content-center">
-        <Image fluid width="40%" height="auto" className="img-responsive mx-auto" src={bio_logo1}  alt="logo"/>
-        </Row>
-        <Row className="justify-content-center">
-            <p>Formerly the Biomedical Mentorship Program</p>
-        </Row>
-        
-        <hr></hr> */}
         <Row className="text-center">
             <Image fluid width="800px" height="auto" className="img-responsive mx-auto" src={group_collab}  alt="logo"/>
         </Row>

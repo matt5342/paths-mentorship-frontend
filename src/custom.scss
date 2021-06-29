@@ -193,8 +193,6 @@ body {
   transform-style: preserve-3d;
   height: auto;
   transition: all 0.5s ease-out;
-  background: white;
-  border: none;
 }
 
 .card-flip div {
@@ -202,7 +200,6 @@ body {
   transform-style: preserve-3d;
   height: 100%;
   width: 100%;
-  border: none;
 }
 
 .card-flip .front {

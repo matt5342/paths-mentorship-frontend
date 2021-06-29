@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Axios } from '../firebase/firebaseConfig'
 import { Button } from 'react-bootstrap';
-// modeled after https://betterprogramming.pub/a-simple-and-easy-contact-form-step-by-step-tutorial-react-js-1532bc025980
 const ContactForm = () => {
   const [formData, setFormData] = useState({})
 
@@ -36,14 +35,6 @@ const ContactForm = () => {
       'https://us-central1-Paths-mentorship.cloudfunctions.net/submit',
       formData
     )
-      // .then(res => {
-      //   db.collection('emails').add({
-      //     name: formData.name,
-      //     email: formData.email,
-      //     message: formData.message,
-      //     time: new Date(),
-      //   })
-      // })
       .catch(error => {
         console.log(error)
       })
