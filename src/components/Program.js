@@ -132,7 +132,7 @@ const topics_schedule_cards_info = [
 export default function Program() {
   return (
     <div className="container">
-        <h1>Programs</h1>
+        <h2><strong>Programs</strong></h2>
         <Row >
             <ProgramSlides />
         </Row>
