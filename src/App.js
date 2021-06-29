@@ -12,12 +12,11 @@ import ContactForm from './components/ContactUs'
 import Opportunities from './components/Opportunities';
 import StudentsParents from './components/StudentsParents';
 import Login from './components/Login';
-// import SignUp from './components/SignUp';
 import SignUp from './components/SignUp';
 import AboutUs from './components/AboutUs';
 import Impact from './components/Impact';
 import Profile from './components/Profile';
-// import AdminPanel from './components/AdminPanel';
+import AdminPanel from './components/AdminPanel';
 
 
 function App() {
