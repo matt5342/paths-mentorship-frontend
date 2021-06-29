@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, Card, Button, Row, Col } from 'react-bootstrap';
+import { Accordion, Card, Button, Row, Col, Image } from 'react-bootstrap';
 import website_vertical from '../assets/opportunities/website_vertical.png'; 
 
 export default function Opportunities() {
@@ -85,8 +85,8 @@ export default function Opportunities() {
                 </Card>
                 </Accordion>
             </Col>
-            <Col style={{"display": "block", "margin": "auto"}}>
-                <img width="400px" height="auto" className="img-responsive" src={website_vertical}  alt="logo" />
+            <Col sm={8} md={6} style={{"display": "block", "margin": "auto"}}>
+                <Image fluid width="400px" height="auto" className="img-responsive" src={website_vertical}  alt="logo" />
             </Col>
         </Row>
     </div>

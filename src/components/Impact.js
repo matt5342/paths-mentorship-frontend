@@ -31,7 +31,7 @@ export default function Impact() {
     <div className="container">
         <h2 className="text-center"><strong>Our Impact</strong></h2>
         <Row>
-          <Col sm={7} className="justify-content-center">
+          <Col sm={7} className="justify-content-center mb-4">
             <Image fluid width="auto" height="50%" className="img-responsive mx-auto" src={impact_20_21}  alt="logo"/>
           </Col>
           <Col sm={5} className="justify-content-center">
@@ -40,7 +40,7 @@ export default function Impact() {
                 News & Updates
               </div>
               <div className="card-body">
-                {!publications ? <div>No Updates Yet</div> : 
+                {!publications || publications.length === 0 ? <div>No Updates Yet</div> : 
                   publications.map((publication) => {
                     return(
                       <div>
