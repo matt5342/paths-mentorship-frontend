@@ -38,9 +38,10 @@ function App() {
   return (
     <div className="wrapper">
       <Navigation />
+      <br></br><br></br><br></br>
       <div className="container">
         {alert.message &&
-          <div className={`alert ${alert.type}`}>{alert.message}</div>
+          <div className={`alert ${alert.type}`}><br></br>{alert.message}</div>
         }
         
 

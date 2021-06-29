@@ -6,7 +6,7 @@ import { publicationService } from "../_services/publication.service";
 
 export default function Impact() {
 
-  const [publications, setPublications] = useState("");
+  const [publications, setPublications] = useState([""]);
   const dispatch = useDispatch()
   useEffect(() => {
     publicationService.getAll()
@@ -28,13 +28,13 @@ export default function Impact() {
   }, [dispatch])
 
   return (
-    <div className="container text-center">
-        <h2><strong>Our Impact</strong></h2>
+    <div className="container">
+        <h2 className="text-center"><strong>Our Impact</strong></h2>
         <Row>
-          <Col className="col-md-8">
-            <Image fluid width="auto" height="auto" className="img-responsive mx-auto" src={impact_20_21}  alt="logo"/>
+          <Col sm={7} className="justify-content-center">
+            <Image fluid width="auto" height="50%" className="img-responsive mx-auto" src={impact_20_21}  alt="logo"/>
           </Col>
-          <Col className="col-md-4">
+          <Col sm={5} className="justify-content-center">
             <div className="card impact-card">
               <div className="card-header h3">
                 News & Updates

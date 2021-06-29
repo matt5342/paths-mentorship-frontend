@@ -1,15 +1,17 @@
 // Override default variables before the import
 // $body-bg: rgb(72, 94, 168);
 $enable-gradients: true;
-$body-bg: #c3d2f4ff;
-$primary: #5a87cb;
+$body-bg:white;
+// $primary: #5a87cb;
+$nav-colors: #3366cc;
+$primary: #3366cc;
 // $body-bg: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,210,246,1) 0%, rgba(79,126,196,1) 100%);
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .color-nav{
-    background-color: #5a87cb;
+    background-color: $nav-colors;
 }
 .nav-link{
   color: white !important;
@@ -68,9 +70,9 @@ body {
   }
 // Footer styles from https://www.ordinarycoders.com/blog/article/bootstrap-footers
   .footer-dark {
-    padding:50px 0;
+    padding:25px 0;
     color:#f0f9ff;
-    background-color:#5a87cb;
+    background-color: $nav-colors;
   }
   
   .footer-dark h3 {
@@ -91,15 +93,15 @@ body {
   .footer-dark ul a {
     color:white;
     text-decoration:none;
-    opacity:0.6;
+    opacity:0.7;
   }
   
   .footer-dark ul a:hover {
-    opacity:0.8;
+    opacity:0.9;
   }
   
   .footer-dark .item.text {
-    margin-bottom:36px;
+    margin-bottom:12px;
   }
   
   @media (max-width:767px) {
@@ -109,8 +111,38 @@ body {
   }
   
   .footer-dark .item.text p {
-    opacity:0.6;
+    // opacity:0.8;
     margin-bottom:0;
+  }
+
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin:0 8px;
+    color:#fff;
+    opacity:0.9;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    cursor: pointer;
+    // opacity:0.9;
   }
   
   .footer-dark .copyright {

@@ -13,7 +13,7 @@ const ProgramDevCards = ({card_info}) => {
                                 <h5 className="card-title">{workshop.title}</h5>
                             </div>
                             <div className="back card-block">
-                                <h5 className="card-title"><strong>{workshop.title}</strong></h5>
+                                <h5 className="card-title "><strong>{workshop.title}</strong></h5>
                                 <Table striped bordered hover size="sm">
                                     <th>Students Learned</th>
                                     {workshop.bullets.map((bullet) => {
