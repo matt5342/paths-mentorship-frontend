@@ -50,7 +50,7 @@ export default function Impact() {
                         <div>
                           {publication.description}
                         </div>
-                        <a href={publication.link}>Read More...</a>
+                        <a href={publication.link} target="_blank">Read More...</a>
                         <hr></hr>
                       </div>
                     )
