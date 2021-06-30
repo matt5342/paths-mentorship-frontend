@@ -17,6 +17,7 @@ import AboutUs from './components/AboutUs';
 import Impact from './components/Impact';
 import Profile from './components/Profile';
 import AdminPanel from './components/AdminPanel';
+import ScrollToTop from "react-scroll-to-top";
 
 
 function App() {
@@ -69,6 +70,8 @@ function App() {
         </Switch>
 
       </Router>
+      <ScrollToTop smooth top="400" />
+
       <NavBottom/>
     </div>
   );
