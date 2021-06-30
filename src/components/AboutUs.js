@@ -11,7 +11,7 @@ export default function AboutUs() {
         <Row className="justify-content-center">
             <h1><strong>Who Are We?</strong></h1>
         </Row>
-        <Row className="justify-content-center m-5 text-center">
+        <Row className="justify-content-center m-3 text-center">
             <p>
                 The Program for Advancing the Health Sciences began in 2018 as the Health and Biosciences Mentorship 
                 Program at Prince George’s County Public Schools.
@@ -54,8 +54,9 @@ export default function AboutUs() {
                 </p>
             </Col>
         </Row>
+        <hr></hr>
         <Row className="justify-content-center">
-            <h2><strong>Executive Committee Members</strong></h2>
+            <h2 className="text-center"><strong>Executive Committee Members</strong></h2>
         </Row>
         <br></br>
         <Row>
@@ -89,7 +90,7 @@ export default function AboutUs() {
             <Col className="col-md-2 " />
             <Row>
                 <Col className="text-center" sm={6}>
-                    <img width="150px" height="auto" className="img-responsive mx-auto" src={pgcps_logo}  alt="logo"/>
+                    <img width="150px" height="auto" className="img-responsive mx-auto mb-3" src={pgcps_logo}  alt="logo"/>
                 </Col>
                 <Col sm={6} className="">
                     <p>
@@ -102,7 +103,7 @@ export default function AboutUs() {
                 </Col>
 
                 <Col className="text-center" sm={6}>
-                    <img width="150px" height="auto" className="img-responsive mx-auto" src={acps_logo}  alt="logo"/>
+                    <img width="150px" height="auto" className="img-responsive mb-3 mx-auto" src={acps_logo}  alt="logo"/>
                 </Col>
                 <Col sm={6} className="">
                     <p>
