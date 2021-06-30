@@ -7,7 +7,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function NavBottom() {
-    const rerouteToLinkedin = () => window.open('https://www.instagram.com/pathsmentorship/', "_blank")
+    const rerouteToLinkedin = () => window.open('https://www.linkedin.com/company/paths-mentorship/about/', "_blank")
     const rerouteToInstagram = () => window.open('https://www.instagram.com/pathsmentorship/', "_blank")
     const rerouteToGithub = () => window.open('https://github.com/matt5342', "_blank")
 
@@ -43,7 +43,7 @@ export default function NavBottom() {
                   </Row>
                   <Col sm={6} md={4}/>
                     <Col className="item social">
-                        {/* <a onClick={rerouteToLinkedin}><i className="icon ion-social-linkedin"><FontAwesomeIcon icon={faLinkedin}/></i></a> */}
+                        <a onClick={rerouteToLinkedin}><i className="icon ion-social-linkedin"><FontAwesomeIcon icon={faLinkedin}/></i></a>
                         <a onClick={rerouteToInstagram}><i className="icon ion-social-instagram"><FontAwesomeIcon icon={faInstagram}/></i></a>
                     </Col>
                   <p className="copyright">
