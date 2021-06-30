@@ -11,7 +11,6 @@ import summer_jobs_icon from '/Users/mattsewell/Development/pathsmentorship/fron
 import wellness_check_icon from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/program_cards/wellness_check_icon.png'
 import ProgramBadges from './presentational/ProgramBadges';
 import ActionPotentialInitiative from './presentational/ActionPotentialInitiative';
-// import Scrollspy from 'react-scrollspy';
 import TopicsScheduleCards from './presentational/TopicsScheduleCards';
 
 const dev_worshops_cards_info = [
@@ -138,9 +137,6 @@ export default function Program() {
         <Row >
             <ProgramSlides />
         </Row>
-        {/* <Scrollspy items={ ['section-1', 'section-2', 'section-3'] } currentClassName="is-current">
-            <li><a href="#section-1">section 1</a></li>
-        </Scrollspy> */}
         
         <br></br>
         <Row>
@@ -152,38 +148,35 @@ export default function Program() {
         </Row>
         <br></br>
 
-        {/* <section id="section-1">
-        </section> */}
-
-        <h4><strong>Development Workshops</strong></h4>
-        <hr className="hr-programs"></hr>
-        <Row>
-            <div className="container">
-                <div className="row text-center">
-                    <ProgramDevCards card_info={dev_worshops_cards_info} />
+        <section id="dev-workshops">
+            <h4><strong>Development Workshops</strong></h4>
+            <hr className="hr-programs"></hr>
+            <Row>
+                <div className="container">
+                    <div className="row text-center">
+                        <ProgramDevCards card_info={dev_worshops_cards_info} />
+                    </div>
                 </div>
-            </div>
-        </Row>
-
+            </Row>
+        </section>
         <hr></hr>
-        <h4><strong>Career Seminars</strong></h4>
-        <hr className="hr-programs"></hr>
-        <br></br>
-        {/* <div className="container">
-            <div className="row text-center">
-                <ProgramCareerCards card_info={career_seminars_cards_info} />
-            </div>
-        </div> */}
-        <Row className="container">
-            <ProgramBadges card_info={career_seminars_cards_info} />
-        </Row>
+        <section id="career-seminars">
+            <h4><strong>Career Seminars</strong></h4>
+            <hr className="hr-programs"></hr>
+            <br></br>
+            <Row className="container">
+                <ProgramBadges card_info={career_seminars_cards_info} />
+            </Row>
+        </section>
         <hr></hr>
-        <h4><strong>Action Potential Initiative</strong></h4>
-        <hr className="hr-programs"></hr>
-        <br></br>
-        <Row>
-            <ActionPotentialInitiative />
-        </Row>
+        <section id="action-potential-initiative">
+            <h4><strong>Action Potential Initiative</strong></h4>
+            <hr className="hr-programs"></hr>
+            <br></br>
+            <Row>
+                <ActionPotentialInitiative />
+            </Row>
+        </section>
         <br></br>
         <Row className="justify-content-center">
             <h4 className="">Topics Schedule</h4>
