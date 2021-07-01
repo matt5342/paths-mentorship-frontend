@@ -132,6 +132,7 @@ const AdminPanel = () => {
 									<th>Email</th>
 									<th>First Name</th>
 									<th>Last Name</th>
+									<th>Role</th>
 									<th>School</th>
 									<th>Action</th>
 								</tr>
@@ -145,6 +146,7 @@ const AdminPanel = () => {
 											<td>{user.email}</td>
 											<td>{user.firstName}</td>
 											<td>{user.lastName}</td>
+											<td>{user.roles[0].slice(5).toLowerCase()}</td>
 											<td>{user.school}</td>
 											<td><Button variant='danger' 
 													onClick={() => { 
