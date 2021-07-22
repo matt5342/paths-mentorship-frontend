@@ -48,7 +48,7 @@ export default function NavBottom() {
                     </Col>
                   <p className="copyright">
                     © 2021. Built by Matthew Sewell |{" "}
-                    <a onClick={rerouteToGithub} style={{color: "#f0f9ff", "text-decoration": "underline", "cursor": "pointer"}} >Github</a>{" "}|
+                    <a onClick={rerouteToGithub} style={{color: "#f0f9ff", "textDecoration": "underline", "cursor": "pointer"}} >Github</a>{" "}|
                   </p>
               </div>
           </footer>

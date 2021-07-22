@@ -40,7 +40,7 @@ export default function Impact() {
                 News & Updates
               </div>
               <div className="card-body">
-                {!publications || publications.length === 0 ? <div>No Updates Yet</div> : 
+                {!publications || publications.length === 0 || !publications[0].title ? <div>No Updates Yet</div> : 
                   publications.reverse().map((publication) => {
                     return(
                       <div>
