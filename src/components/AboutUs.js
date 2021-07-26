@@ -22,6 +22,16 @@ export default function AboutUs() {
             </p>
         </Row>
         <hr></hr>
+        <Row className="justify-content-center m-3 text-center">
+            <h2><strong>Our Mission</strong></h2>
+            <p>
+                Our mission is to prepare students for careers in STEM and health by connecting them with near peer 
+                mentors actively working in these fields. PATHS aims to open doors for students to pursue higher 
+                education and provides a stable structure for these future professionals to flourish. More than mentors: 
+                we empower, inspire, and guide students down the path to careers in STEM and health.
+            </p>
+        </Row>
+        <hr></hr>
         <Row className="justify-content-center">
             <h2><strong>Program Directors</strong></h2>
             <br></br><br></br><br></br>

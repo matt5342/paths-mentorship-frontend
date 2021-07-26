@@ -3,6 +3,8 @@ import { Accordion, Card, Button, Row, Col, Image } from 'react-bootstrap';
 import website_vertical from '../assets/opportunities/website_vertical.png'; 
 
 export default function Opportunities() {
+    const rerouteToMentorForm = () => window.open('https://forms.gle/KVRqJu9iefSCcXUG9', "_blank")
+
   return (
     <div className="container">
         <Row className="justify-content-center">
@@ -32,7 +34,7 @@ export default function Opportunities() {
                                 strong bonds that go beyond the course of the program.
                                 <br></br><br></br>
                                 If you are interested in serving as a mentor, our recruitment process begins every August. 
-                                Fill out this form so we can notify you when recruitment opens. If you have any questions, 
+                                Fill out <a onClick={rerouteToMentorForm} className="external-link">this form</a> so we can notify you when recruitment opens. If you have any questions, 
                                 <a href="/contact"> contact us</a>!
                         </Card.Body>
                     </Accordion.Collapse>

@@ -16,7 +16,10 @@ $primary: #3366cc;
 .nav-link{
   color: white !important;
 }
-
+.external-link {
+  color: $primary;
+  cursor: pointer;
+}
 .nav-btn {
     color: white;
 }
