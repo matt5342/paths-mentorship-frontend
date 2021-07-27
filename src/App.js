@@ -18,6 +18,7 @@ import Impact from './components/Impact';
 import Profile from './components/Profile';
 import AdminPanel from './components/AdminPanel';
 import ScrollToTop from "react-scroll-to-top";
+import ForgotPassword from './components/ForgotPassword';
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
           <Route exact path="/students-parents" component={StudentsParents} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/forgotPassword" component={ForgotPassword} />
           <Route exact path="/profile">
             {loggedIn ? <Profile/> : <Redirect to="/login"/>}
           </Route>
