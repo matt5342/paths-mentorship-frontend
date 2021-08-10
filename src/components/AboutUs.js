@@ -117,11 +117,10 @@ export default function AboutUs() {
                 </Col>
                 <Col sm={6} className="">
                     <p>
-                        Dr. Linda Zanin, George Washington University<br></br>
-                        Dr. Tricia Jacobs, ACPS Career and Technical Education<br></br>
-                        Michele Coffman, Laura Evans, ACPS Governor’s Health Sciences Academy<br></br>
-                        Patrick Corr, George Washington University<br></br>
-                        MediCorps Task Force
+                        Dr. Tricia Jacobs, ACPS, Career and Technical Education<br></br>
+                        Michele Coffman, Laura Evans, ACPS, Governor’s Health Sciences Academy<br></br>
+                        Dr. Linda Zanin, Teri Capshaw, the George Washington University, <br></br>Community Medi-Corps Program<br></br>
+                        Dr. Patrick Corr, Governor's Health Sciences Academy, <br></br>the George Washington University
                     </p>
                 </Col>
             </Row>
