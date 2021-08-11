@@ -34,12 +34,12 @@ export default function Home() {
         <br></br>
         <ProgramTable />   
     <hr></hr>
-        <Row className="text-center">
-                <Image fluid width="1000px" height="auto" className="img-responsive mx-auto" src={pgcps_year_end_report}  alt="logo"/>
-        </Row>
         {/* <Row className="text-center">
-            <MentorCareerSatisfactionRating/>
+                <Image fluid width="1000px" height="auto" className="img-responsive mx-auto" src={pgcps_year_end_report}  alt="logo"/>
         </Row> */}
+        <Row className="text-center">
+            <MentorCareerSatisfactionRating/>
+        </Row>
 
     </div>
   )
