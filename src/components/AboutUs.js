@@ -89,7 +89,7 @@ export default function AboutUs() {
                 <p>
                     <br></br>
                     <h5><strong>Grace Taumoefolau</strong></h5>
-                    PhD Student in Cell, Molecular, and Developmental Biology
+                    PhD student in Cell, Molecular, and Developmental Biology
                     <br></br>
                     Johns Hopkins University-NIH
                     <br></br>

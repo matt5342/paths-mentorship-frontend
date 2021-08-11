@@ -9,6 +9,7 @@ $primary: #3366cc;
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
 .color-nav{
     background-color: $nav-colors;
@@ -250,4 +251,35 @@ input {
 .impact-card {
   background-color: rgb(255, 241, 176);
 }
+
+// Star Ratings
+
+.star-rating > input {display: none;}  /* Remove radio buttons */
+
+.star-rating > label:before { 
+  content: "\f005"; /* Star */
+  margin: 2px;
+  font-size: 6em;
+  font-family: FontAwesome;
+  display: inline-block; 
+}
+
+.star-rating > input:checked ~ label{ 
+  color: #ffca08; 
+}
+
+.half-star-rating > input {display: none;}  /* Remove radio buttons */
+
+.half-star-rating > label:before { 
+  content: "\f123"; /* Half Star */
+  margin: 2px;
+  font-size: 6em;
+  font-family: FontAwesome;
+  display: inline-block; 
+}
+
+.half-star-rating > input:checked ~ label{ 
+  color: #ffca08; 
+}
+
 
