@@ -259,7 +259,7 @@ input {
 .star-rating > label:before { 
   content: "\f005"; /* Star */
   margin: 2px;
-  font-size: 6em;
+  font-size: 4em;
   font-family: FontAwesome;
   display: inline-block; 
 }
@@ -273,12 +273,25 @@ input {
 .half-star-rating > label:before { 
   content: "\f123"; /* Half Star */
   margin: 2px;
-  font-size: 6em;
+  font-size: 4em;
   font-family: FontAwesome;
   display: inline-block; 
 }
 
 .half-star-rating > input:checked ~ label{ 
+  color: #ffca08; 
+}
+.empty-star-rating > input {display: none;}  /* Remove radio buttons */
+
+.empty-star-rating > label:before { 
+  content: "\f006"; /* Empty Star */
+  margin: 2px;
+  font-size: 4em;
+  font-family: FontAwesome;
+  display: inline-block; 
+}
+
+.empty-star-rating > input:checked ~ label{ 
   color: #ffca08; 
 }
 
