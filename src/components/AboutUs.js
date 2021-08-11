@@ -1,6 +1,8 @@
 import React from 'react';
 import mor_alkaslasi from '../assets/who_we_are/mor_alkaslasi.png'; 
 import brittany_sincox from '../assets/who_we_are/brittany_sincox.png'; 
+import matthew_nebiyou from '../assets/who_we_are/matthew_nebiyou.jpeg'; 
+import grace_taumoefolau from '../assets/who_we_are/grace_taumoefolau.jpg'; 
 import { Row, Col } from 'react-bootstrap';
 import acps_logo from '../assets/logos/acps_logo.png'; 
 import pgcps_logo from '../assets//logos/pgcps_logo.png'; 
@@ -38,7 +40,7 @@ export default function AboutUs() {
         </Row>
         <Row className="justify-content-center text-center">
             <Col>
-                <img width="70%" height="auto" className="img-responsive mx-auto" src={mor_alkaslasi}  alt="logo"/>
+                <img width="60%" height="auto" className="img-responsive mx-auto" src={mor_alkaslasi}  alt="logo"/>
                 <br></br>
                 <p>
                     <br></br>
@@ -51,7 +53,7 @@ export default function AboutUs() {
                 </p>
             </Col>
             <Col>
-                <img width="70%" height="auto" className="img-responsive mx-auto" src={brittany_sincox}  alt="logo"/>
+                <img width="60%" height="auto" className="img-responsive mx-auto" src={brittany_sincox}  alt="logo"/>
                 <br></br>
                 <p>
                     <br></br>
@@ -69,20 +71,43 @@ export default function AboutUs() {
             <h2 className="text-center"><strong>Executive Committee Members</strong></h2>
         </Row>
         <br></br>
+        <Row className="justify-content-center text-center">
+            <Col>
+                <img width="60%" height="auto" className="img-responsive mx-auto" src={matthew_nebiyou}  alt="logo"/>
+                <br></br>
+                <p>
+                    <br></br>
+                    <h5><strong>Matthew Nebiyou</strong></h5>
+                    Post-baccalaureate Fellow, NIH
+                    <br></br>
+                    PGCPS Committee Head
+                </p>
+            </Col>
+            <Col>
+                <img width="60%" height="auto" className="img-responsive mx-auto" src={grace_taumoefolau}  alt="logo"/>
+                <br></br>
+                <p>
+                    <br></br>
+                    <h5><strong>Grace Taumoefolau</strong></h5>
+                    Graduate Student, NIH
+                    <br></br>
+                    ACPS Committee Head
+                </p>
+            </Col>
+        </Row>
         <Row>
             <Col className="justify-content-center">
-                <h4 className="text-center">PGCPS Committee</h4>
+                <h4 className="text-center"><strong>PGCPS Committee</strong></h4>
                 <p>
                     <strong>Erin Fingleton</strong>, Development Workshop Coordinator<br></br>
                     <strong>Bruny Kenou</strong>, Tutoring Coordinator<br></br>
                     <strong>Ruby Lam</strong>, Development Workshop Coordinator<br></br>
                     <strong>Dan Moyer</strong>, Development Workshop Coordinator<br></br>
-                    <strong>Matthew Nebiyou</strong>, Development Workshop Coordinator<br></br>
                     <strong>Adit Sabnis</strong>, Career Seminar Coordinator
                 </p>
             </Col>
             <Col className="justify-content-center">
-                <h4 className="text-center">ACPS Committee</h4>
+                <h4 className="text-center"><strong>ACPS Committee</strong></h4>
                 <p>
                     <strong>Alison Bashford</strong>, Administrative Secretary<br></br>
                     <strong>Katherine Degner</strong>, Development Workshop Coordinator<br></br>
@@ -90,6 +115,7 @@ export default function AboutUs() {
                     <strong>Dr. Meghan Schott</strong>, Development Workshop Coordinator
                 </p>
             </Col>
+
         </Row>
         <hr></hr>
         <Row className="justify-content-center">
