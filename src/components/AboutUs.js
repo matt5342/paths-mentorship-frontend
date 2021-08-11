@@ -89,7 +89,9 @@ export default function AboutUs() {
                 <p>
                     <br></br>
                     <h5><strong>Grace Taumoefolau</strong></h5>
-                    Graduate Student, NIH
+                    PhD Student in Cell, Molecular, and Developmental Biology
+                    <br></br>
+                    Johns Hopkins University-NIH
                     <br></br>
                     ACPS Committee Head
                 </p>
