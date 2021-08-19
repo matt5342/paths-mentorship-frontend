@@ -38,7 +38,9 @@ export default function Home() {
                 <Image fluid width="1000px" height="auto" className="img-responsive mx-auto" src={pgcps_year_end_report}  alt="logo"/>
         </Row> */}
         <Row className="text-center">
-            <MentorCareerSatisfactionRating num_quotes={3} />
+            <div className="container">
+                <MentorCareerSatisfactionRating num_quotes={3} />
+            </div>
         </Row>
 
     </div>
