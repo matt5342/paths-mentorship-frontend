@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Tabs, Tab, Nav } from 'react-bootstrap'
 import ProgramDevCards from './presentational/ProgramDevCards';
 import ProgramSlides from './presentational/ProgramSlides';
 import ProgramTable from './presentational/ProgramTable';
@@ -143,10 +143,36 @@ export default function Program() {
             <ProgramTable />
         </Row>
         <hr></hr><br></br>
+
         <Row>
             <h2><strong>2020-2021</strong></h2>
         </Row>
         <br></br>
+
+        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+            <Row>
+                <Col sm={3}>
+                <Nav variant="pills" className="flex-column">
+                    <Nav.Item>
+                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                    </Nav.Item>
+                </Nav>
+                </Col>
+                <Col sm={9}>
+                <Tab.Content>
+                    <Tab.Pane eventKey="first">
+                    Some Text
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                        Other Text
+                    </Tab.Pane>
+                </Tab.Content>
+                </Col>
+            </Row>
+        </Tab.Container>
 
         <section id="dev-workshops">
             <h4><strong>Development Workshops</strong></h4>

@@ -11,6 +11,8 @@ export default function Navigation() {
   const currentUser = useSelector((state) => state.authentication.user)
   const loggedIn = useSelector((state) => state.authentication.loggedIn)
   const dispatch = useDispatch();
+  const rerouteToGofundme = () => window.open('https://www.gofundme.com/f/paths-mentorship?utm_source=widget&utm_medium=referral&utm_campaign=p_cp+share-sheet', "_blank")
+
 
   const logout = () => { 
       dispatch(userActions.logout()); 
@@ -48,7 +50,7 @@ export default function Navigation() {
                 }
               </Nav>
               <Nav className="ml-auto">
-                <Button href="https://www.gofundme.com/f/paths-mentorship?utm_source=widget&utm_medium=referral&utm_campaign=p_cp+share-sheet" 
+                <Button onClick={rerouteToGofundme}
                         variant="warning" style={{'fontSize': '15px'}}>
                         <Image fluid width="60px" 
                           height="auto" 

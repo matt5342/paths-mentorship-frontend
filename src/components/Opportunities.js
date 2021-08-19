@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accordion, Card, Button, Row, Col, Image } from 'react-bootstrap';
 import website_vertical from '../assets/opportunities/website_vertical.png'; 
+import MentorCareerSatisfactionRating from './presentational/MentorCareerSatisfactionRating';
 
 export default function Opportunities() {
     const rerouteToMentorForm = () => window.open('https://forms.gle/KVRqJu9iefSCcXUG9', "_blank")
@@ -88,7 +89,8 @@ export default function Opportunities() {
                 </Accordion>
             </Col>
             <Col sm={8} md={6} style={{"display": "block", "margin": "auto"}}>
-                <Image fluid width="400px" height="auto" className="img-responsive" src={website_vertical}  alt="logo" />
+                <MentorCareerSatisfactionRating num_quotes={5} />
+                {/* <Image fluid width="400px" height="auto" className="img-responsive" src={website_vertical}  alt="logo" /> */}
             </Col>
         </Row>
     </div>

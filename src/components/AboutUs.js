@@ -3,7 +3,7 @@ import mor_alkaslasi from '../assets/who_we_are/mor_alkaslasi.png';
 import brittany_sincox from '../assets/who_we_are/brittany_sincox.png'; 
 import matthew_nebiyou from '../assets/who_we_are/matthew_nebiyou.jpeg'; 
 import grace_taumoefolau from '../assets/who_we_are/grace_taumoefolau.jpg'; 
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Accordion, Button, Card } from 'react-bootstrap';
 import acps_logo from '../assets/logos/acps_logo.png'; 
 import pgcps_logo from '../assets//logos/pgcps_logo.png'; 
 
@@ -70,55 +70,83 @@ export default function AboutUs() {
         <Row className="justify-content-center">
             <h2 className="text-center"><strong>Executive Committee Members</strong></h2>
         </Row>
-        <br></br>
-        <Row className="justify-content-center text-center">
-            <Col>
-                <img width="60%" height="auto" className="img-responsive mx-auto" src={matthew_nebiyou}  alt="logo"/>
-                <br></br>
-                <p>
+        <Accordion defaultActiveKey="0" flush>
+            <Card style={{"border-color": "transparent"}}>
+                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                    <Card.Header as={"h4"} style={{"background-color": ""}} className="text-left">
+                        2021-2022
+                    </Card.Header>
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey="0">
+                    <Card.Body>
                     <br></br>
-                    <h5><strong>Matthew Nebiyou</strong></h5>
-                    Post-baccalaureate Fellow, NIH
-                    <br></br>
-                    PGCPS Committee Head
-                </p>
-            </Col>
-            <Col>
-                <img width="60%" height="auto" className="img-responsive mx-auto" src={grace_taumoefolau}  alt="logo"/>
-                <br></br>
-                <p>
-                    <br></br>
-                    <h5><strong>Grace Taumoefolau</strong></h5>
-                    PhD student in Cell, Molecular, and Developmental Biology
-                    <br></br>
-                    Johns Hopkins University-NIH
-                    <br></br>
-                    ACPS Committee Head
-                </p>
-            </Col>
-        </Row>
-        <Row>
-            <Col className="justify-content-center">
-                <h4 className="text-center"><strong>PGCPS Committee</strong></h4>
-                <p>
-                    <strong>Erin Fingleton</strong>, Development Workshop Coordinator<br></br>
-                    <strong>Bruny Kenou</strong>, Tutoring Coordinator<br></br>
-                    <strong>Ruby Lam</strong>, Development Workshop Coordinator<br></br>
-                    <strong>Dan Moyer</strong>, Development Workshop Coordinator<br></br>
-                    <strong>Adit Sabnis</strong>, Career Seminar Coordinator
-                </p>
-            </Col>
-            <Col className="justify-content-center">
-                <h4 className="text-center"><strong>ACPS Committee</strong></h4>
-                <p>
-                    <strong>Alison Bashford</strong>, Administrative Secretary<br></br>
-                    <strong>Katherine Degner</strong>, Development Workshop Coordinator<br></br>
-                    <strong>Surina Patel</strong>, Development Workshop Coordinator<br></br>
-                    <strong>Dr. Meghan Schott</strong>, Development Workshop Coordinator
-                </p>
-            </Col>
+                    <Row className="justify-content-center text-center">
+                        <Col>
+                            <img width="60%" height="auto" className="img-responsive mx-auto" src={matthew_nebiyou}  alt="logo"/>
+                            <br></br>
+                            <p>
+                                <br></br>
+                                <h5><strong>Matthew Nebiyou</strong></h5>
+                                Post-baccalaureate Fellow, NIH
+                                <br></br>
+                                PGCPS Committee Head
+                            </p>
+                        </Col>
+                        <Col>
+                            <img width="60%" height="auto" className="img-responsive mx-auto" src={grace_taumoefolau}  alt="logo"/>
+                            <br></br>
+                            <p>
+                                <br></br>
+                                <h5><strong>Grace Taumoefolau</strong></h5>
+                                PhD student in Cell, Molecular, Developmental Biology and Biophysics
+                                <br></br>
+                                Johns Hopkins University-NIH
+                                <br></br>
+                                ACPS Committee Head
+                            </p>
+                        </Col>
+                    </Row>
+                    </Card.Body>
+                </Accordion.Collapse>
+                </Card>
+                <Card style={{"border-color": "transparent"}}>
+                <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                    <Card.Header as={"h4"} style={{"background-color": ""}} className="text-left">
+                        2020-2021
+                    </Card.Header>
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey="1">
+                    <Card.Body>
+                        <Row>
+                            <Col className="justify-content-center">
+                                <h4 className="text-center"><strong>PGCPS Committee</strong></h4>
+                                <p>
+                                    <strong>Erin Fingleton</strong>, Development Workshop Coordinator<br></br>
+                                    <strong>Bruny Kenou</strong>, Tutoring Coordinator<br></br>
+                                    <strong>Ruby Lam</strong>, Development Workshop Coordinator<br></br>
+                                    <strong>Dan Moyer</strong>, Development Workshop Coordinator<br></br>
+                                    <strong>Matthew Nebiyou</strong>, Development Workshop Coordinator<br></br>
+                                    <strong>Adit Sabnis</strong>, Career Seminar Coordinator
+                                </p>
+                            </Col>
+                            <Col className="justify-content-center">
+                                <h4 className="text-center"><strong>ACPS Committee</strong></h4>
+                                <p>
+                                    <strong>Alison Bashford</strong>, Administrative Secretary<br></br>
+                                    <strong>Katherine Degner</strong>, Development Workshop Coordinator<br></br>
+                                    <strong>Surina Patel</strong>, Development Workshop Coordinator<br></br>
+                                    <strong>Dr. Meghan Schott</strong>, Development Workshop Coordinator
+                                </p>
+                            </Col>
 
-        </Row>
+                        </Row>
+                    <br></br>
+                    </Card.Body>
+                </Accordion.Collapse>
+                
+            </Card>
+            
+        </Accordion>
         <hr></hr>
         <Row className="justify-content-center">
             <h4><strong>With Support From</strong></h4>
