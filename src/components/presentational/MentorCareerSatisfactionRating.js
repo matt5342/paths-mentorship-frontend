@@ -39,10 +39,10 @@ export default function MentorCareerSatisfactionRating({ num_quotes }) {
                       <label></label>
                       <label></label>
                       <label></label>
-                  </div>
-                  <div className="half-star-rating d-flex justify-content-center flex-row-reverse">
-                    <input checked type="radio"/>
-                      <label></label>
+                      <div className="half-star-rating d-flex justify-content-center flex-row-reverse">
+                        <input checked type="radio"/>
+                          <label></label>
+                      </div>
                   </div>
                 </Row>
             </Col>
@@ -55,10 +55,10 @@ export default function MentorCareerSatisfactionRating({ num_quotes }) {
                       <label></label>
                       <label></label>
                       <label></label>
-                  </div>
-                  <div className="empty-star-rating d-flex justify-content-center flex-row-reverse">
-                    <input checked type="radio"/>
-                      <label></label>
+                      <div className="empty-star-rating d-flex justify-content-center flex-row-reverse">
+                        <input checked type="radio"/>
+                          <label></label>
+                      </div>
                   </div>
                 </Row>
             </Col>
