@@ -175,10 +175,10 @@ export default function AboutUs() {
                     <p>
                         Dr. Tricia Jacobs, ACPS, Career and Technical Education<br></br>
                         Michele Coffman, Laura Evans, ACPS, Governor’s Health Sciences Academy<br></br>
-                        Dr. Linda Zanin, Teri Capshaw, the George Washington University School of Medicine and Health Sciences,
+                        Dr. Linda Zanin, Teri Capshaw, The George Washington University School of Medicine and Health Sciences,
                         Community Medi-Corps Program<br></br>
                         Dr. Patrick Corr, Governor's Health Sciences Academy, <br></br>
-                        the George Washington University School of Medicine and Health Sciences
+                        The George Washington University School of Medicine and Health Sciences
                     </p>
                 </Col>
             </Row>
