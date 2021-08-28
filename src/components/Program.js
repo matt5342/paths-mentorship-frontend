@@ -149,7 +149,7 @@ export default function Program() {
         </Row>
         <br></br>
 
-        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        {/* <Tab.Container id="left-tabs-example" defaultActiveKey="first">
             <Row>
                 <Col sm={3}>
                 <Nav variant="pills" className="flex-column">
@@ -172,7 +172,7 @@ export default function Program() {
                 </Tab.Content>
                 </Col>
             </Row>
-        </Tab.Container>
+        </Tab.Container> */}
 
         <section id="dev-workshops">
             <h4><strong>Development Workshops</strong></h4>
