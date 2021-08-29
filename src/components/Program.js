@@ -1,5 +1,6 @@
 import React from 'react';
-import { Row, Col, Tabs, Tab, Nav } from 'react-bootstrap'
+import { Row, Col, Nav } from 'react-bootstrap'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ProgramDevCards from './presentational/ProgramDevCards';
 import ProgramSlides from './presentational/ProgramSlides';
 import ProgramTable from './presentational/ProgramTable';
@@ -12,6 +13,7 @@ import wellness_check_icon from '/Users/mattsewell/Development/pathsmentorship/f
 import ProgramBadges from './presentational/ProgramBadges';
 import ActionPotentialInitiative from './presentational/ActionPotentialInitiative';
 import TopicsScheduleCards from './presentational/TopicsScheduleCards';
+import 'react-tabs/style/react-tabs.css';
 
 const dev_worshops_cards_info = [
     {title: "Academic Success in a Virtual World", 
@@ -142,66 +144,68 @@ export default function Program() {
         <Row>
             <ProgramTable />
         </Row>
-        <hr></hr><br></br>
-
-        <Row>
-            <h2><strong>2020-2021</strong></h2>
-        </Row>
-        <br></br>
-
-        {/* <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-            <Row>
-                <Col sm={3}>
-                <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                </Nav>
-                </Col>
-                <Col sm={9}>
-                <Tab.Content>
-                    <Tab.Pane eventKey="first">
-                    Some Text
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                        Other Text
-                    </Tab.Pane>
-                </Tab.Content>
-                </Col>
-            </Row>
-        </Tab.Container> */}
-
-        <section id="dev-workshops">
-            <h4><strong>Development Workshops</strong></h4>
-            <hr className="hr-programs"></hr>
-            <Row>
-                <div className="container">
-                    <div className="row text-center">
-                        <ProgramDevCards card_info={dev_worshops_cards_info} />
-                    </div>
-                </div>
-            </Row>
-        </section>
         <hr></hr>
-        <section id="career-seminars">
-            <h4><strong>Career Seminars</strong></h4>
-            <hr className="hr-programs"></hr>
-            <br></br>
-            <Row className="container">
-                <ProgramBadges card_info={career_seminars_cards_info} />
-            </Row>
-        </section>
+
+        <Tabs>
+            <TabList>
+                <Tab><h2 className="tab-link"><strong>2020-2021</strong></h2></Tab>
+                {/* <Tab><h2 className="tab-link"><strong>2021-2022</strong></h2></Tab> */}
+            </TabList>
+
+            <TabPanel>
+                <section id="dev-workshops">
+                    <h4><strong>Development Workshops</strong></h4>
+                    <hr className="hr-programs"></hr>
+                    <Row>
+                        <div className="container">
+                            <div className="row text-center">
+                                <ProgramDevCards card_info={dev_worshops_cards_info} />
+                            </div>
+                        </div>
+                    </Row>
+                </section>
+                <hr></hr>
+                <section id="career-seminars">
+                    <h4><strong>Career Seminars</strong></h4>
+                    <hr className="hr-programs"></hr>
+                    <br></br>
+                    <Row className="container">
+                        <ProgramBadges card_info={career_seminars_cards_info} />
+                    </Row>
+                </section>
+            </TabPanel>
+            {/* <TabPanel>
+                <section id="dev-workshops">
+                    <h4 ><strong className="link-primary">Development Workshops</strong></h4>
+                    <hr className="hr-programs"></hr>
+                    <Row>
+                        <div className="container">
+                            <div className="row text-center">
+                                <ProgramDevCards card_info={dev_worshops_cards_info} />
+                            </div>
+                        </div>
+                    </Row>
+                </section>
+                <hr></hr>
+                <section id="career-seminars">
+                    <h4><strong>Career Seminars</strong></h4>
+                    <hr className="hr-programs"></hr>
+                    <br></br>
+                    <Row className="container">
+                        <ProgramBadges card_info={career_seminars_cards_info} />
+                    </Row>
+                </section>
+            </TabPanel> */}
+        </Tabs>
+
         <hr></hr>
-        <section id="action-potential-initiative">
-            <h4><strong>Action Potential Initiative</strong></h4>
-            <hr className="hr-programs"></hr>
-            <br></br>
-            <Row>
-                <ActionPotentialInitiative />
-            </Row>
+            <section id="action-potential-initiative">
+                <h4><strong>Action Potential Initiative</strong></h4>
+                <hr className="hr-programs"></hr>
+                <br></br>
+                <Row>
+                    <ActionPotentialInitiative />
+                </Row>
         </section>
         <br></br>
         <Row className="justify-content-center">

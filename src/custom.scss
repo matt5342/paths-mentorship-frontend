@@ -300,4 +300,10 @@ input {
   color: #ffca08; 
 }
 
+.tab-link {
+  color: $primary;
+}
 
+.tab-link:hover {
+  text-decoration: underline;
+}

@@ -25,6 +25,7 @@
     "react-scripts": "4.0.3",
     "react-scroll-to-top": "^1.0.5",
     "react-scrollspy": "^3.4.3",
+    "react-tabs": "^3.2.2",
     "redux": "^4.0.5",
     "redux-logger": "^4.0.0",
     "redux-thunk": "^2.3.0",
