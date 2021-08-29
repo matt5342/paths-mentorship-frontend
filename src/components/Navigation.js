@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Navbar, Nav, Container, Image, NavDropdown, Button } from 'react-bootstrap'
+import { Navbar, Nav, Container, Image, Button } from 'react-bootstrap'
 import bio_logo4 from '../assets/logos/bio_logo4.png'; 
 import GoFundMe_logo from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/logos/GoFundMe_logo.svg'
 import { useDispatch } from 'react-redux';
@@ -30,7 +30,7 @@ export default function Navigation() {
                 <Nav.Link href="programs" className="nav-link">Programs</Nav.Link>
                 <Nav.Link href="opportunities" className="nav-link">Opportunities</Nav.Link>
                 <Nav.Link href="impact" className="nav-link">Impact</Nav.Link>
-                <Nav.Link href="students-parents" className="nav-link">Students & Parents</Nav.Link>
+                {/* <Nav.Link href="students-parents" className="nav-link">Students & Parents</Nav.Link> */}
                 <Nav.Link href="about" className="nav-link">Who We Are</Nav.Link>
                 <Nav.Link href="contact" className="nav-link">Contact Us</Nav.Link>
                 {loggedIn && currentUser.roles.includes("ROLE_ADMIN") ? 
@@ -46,7 +46,8 @@ export default function Navigation() {
                     <Nav.Link href="profile" className="nav-link">{currentUser.username}</Nav.Link>
                     <Nav.Link onClick={logout} className="nav-link">Logout</Nav.Link>
                    </Nav>
-                  : <Nav.Link href="login" className="nav-link">Log In</Nav.Link>
+                   : null
+                  // : <Nav.Link href="login" className="nav-link">Log In</Nav.Link>
                 }
               </Nav>
               <Nav className="ml-auto">
