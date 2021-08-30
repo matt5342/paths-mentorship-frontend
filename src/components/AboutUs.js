@@ -77,31 +77,6 @@ export default function AboutUs() {
                 <Tab><h3 className="tab-link"><strong>2021-2022</strong></h3></Tab>
                 <Tab><h3 className="tab-link"><strong>2020-2021</strong></h3></Tab>
             </TabList>
-
-            <TabPanel>
-                <Row>
-                    <Col className="justify-content-center">
-                        <h4 className="text-center"><strong>PGCPS Committee</strong></h4>
-                        <p>
-                            <strong>Erin Fingleton</strong>, Development Workshop Coordinator<br></br>
-                            <strong>Bruny Kenou</strong>, Tutoring Coordinator<br></br>
-                            <strong>Ruby Lam</strong>, Development Workshop Coordinator<br></br>
-                            <strong>Dan Moyer</strong>, Development Workshop Coordinator<br></br>
-                            <strong>Matthew Nebiyou</strong>, Development Workshop Coordinator<br></br>
-                            <strong>Adit Sabnis</strong>, Career Seminar Coordinator
-                        </p>
-                    </Col>
-                    <Col className="justify-content-center">
-                        <h4 className="text-center"><strong>ACPS Committee</strong></h4>
-                        <p>
-                            <strong>Alison Bashford</strong>, Administrative Secretary<br></br>
-                            <strong>Katherine Degner</strong>, Development Workshop Coordinator<br></br>
-                            <strong>Surina Patel</strong>, Development Workshop Coordinator<br></br>
-                            <strong>Dr. Meghan Schott</strong>, Development Workshop Coordinator
-                        </p>
-                    </Col>
-                </Row>
-            </TabPanel>
             <TabPanel>
                 <Row className="justify-content-center text-center">
                     <Col>
@@ -126,6 +101,30 @@ export default function AboutUs() {
                             Johns Hopkins University-NIH
                             <br></br>
                             ACPS Committee Head
+                        </p>
+                    </Col>
+                </Row>
+            </TabPanel>
+            <TabPanel>
+                <Row>
+                    <Col className="justify-content-center">
+                        <h4 className="text-center"><strong>PGCPS Committee</strong></h4>
+                        <p>
+                            <strong>Erin Fingleton</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Bruny Kenou</strong>, Tutoring Coordinator<br></br>
+                            <strong>Ruby Lam</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Dan Moyer</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Matthew Nebiyou</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Adit Sabnis</strong>, Career Seminar Coordinator
+                        </p>
+                    </Col>
+                    <Col className="justify-content-center">
+                        <h4 className="text-center"><strong>ACPS Committee</strong></h4>
+                        <p>
+                            <strong>Alison Bashford</strong>, Administrative Secretary<br></br>
+                            <strong>Katherine Degner</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Surina Patel</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Dr. Meghan Schott</strong>, Development Workshop Coordinator
                         </p>
                     </Col>
                 </Row>
