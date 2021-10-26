@@ -104,6 +104,31 @@ export default function AboutUs() {
                         </p>
                     </Col>
                 </Row>
+                <Row>
+                    <Col className="justify-content-center">
+                        <h4 className="text-center"><strong>PGCPS Committee</strong></h4>
+                        <p>
+                            <strong>Kaitlin Ballenger</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Kathleen Carmichael</strong>, Administrative Secretary<br></br>
+                            <strong>Daniel Clark</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Vicki Remley</strong>, API Coordinator<br></br>
+                            <strong>Adit Sabnis</strong>, Career Seminar Coordinator<br></br>
+                            <strong>Rachel Tavory</strong>, Development Workshop Coordinator
+                            
+                        </p>
+                    </Col>
+                    <Col className="justify-content-center">
+                        <h4 className="text-center"><strong>ACPS Committee</strong></h4>
+                        <p>
+                            <strong>Katherine Degner</strong>, API Coordinator<br></br>
+                            <strong>Paige Faasuamalie</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Charlotte Godfrey</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Sydnee Gould</strong>, Administrative Secretary<br></br>
+                            <strong>Adit Sabnis</strong>, Career Seminar Coordinator<br></br>
+                            <strong>Jacquelyn Willis</strong>, Development Workshop Coordinator
+                        </p>
+                    </Col>
+                </Row>
             </TabPanel>
             <TabPanel>
                 <Row>
