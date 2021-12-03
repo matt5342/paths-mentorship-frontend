@@ -1,8 +1,9 @@
-import firebase from 'firebase/app' // doing import firebase from 'firebase' or import * as firebase from firebase is not good practice.
-import 'firebase/auth'
+import firebase from 'firebase/app'; // doing import firebase from 'firebase' or import * as firebase from firebase is not good practice.
+import 'firebase/auth';
 // import 'firebase/database'
 import 'firebase/firestore';
-import Axios from 'axios'
+import Axios from 'axios';
+import { getAnalytics } from "firebase/analytics";
 
 // Initialize Firebase
 let config = {
@@ -15,8 +16,7 @@ let config = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 }
 
-firebase.initializeApp(config)
+const app = firebase.initializeApp(config)
 
-// const db = firebase.firestore()
-
+const analytics = getAnalytics(app);
 export { Axios }
