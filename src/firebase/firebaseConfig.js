@@ -1,9 +1,9 @@
-import firebase from 'firebase/app'; // doing import firebase from 'firebase' or import * as firebase from firebase is not good practice.
-import 'firebase/auth';
-// import 'firebase/database'
-import 'firebase/firestore';
-import Axios from 'axios';
-import { getAnalytics } from "firebase/analytics";
+// import firebase from 'firebase/app' // doing import firebase from 'firebase' or import * as firebase from firebase is not good practice.
+import firebase from "firebase/app";
+import 'firebase/auth'
+import 'firebase/firestore'
+import Axios from 'axios'
+import analytics from "firebase/analytics"
 
 // Initialize Firebase
 let config = {
@@ -17,6 +17,7 @@ let config = {
 }
 
 const app = firebase.initializeApp(config)
+// const app = initializeApp(config);
+const anal = firebase.analytics(app);
 
-const analytics = getAnalytics(app);
 export { Axios }
