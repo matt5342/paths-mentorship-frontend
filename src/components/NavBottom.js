@@ -22,6 +22,7 @@ export default function NavBottom() {
                         <Col md={5} className="item text mb-3">
                           <h3>PATHS Mentorship</h3>
                           <p >Here to help YOU achieve your{<br></br>} STEM and Healthcare dreams!</p>
+                          <small style={{opacity: 0.5}}>*This is not endorsed by the National Institutes of Health (NIH), nor is it an NIH-affiliated program.</small>
                         </Col>
                       <Col sm={6} md={2} className="item">
                             <div>
@@ -47,7 +48,7 @@ export default function NavBottom() {
                         <a onClick={rerouteToInstagram}><i className="icon ion-social-instagram"><FontAwesomeIcon icon={faInstagram}/></i></a>
                     </Col>
                   <p className="copyright">
-                    © 2021. Built by Matthew Sewell |{" "}
+                    © {new Date().getFullYear()}. Built by Matthew Sewell |{" "}
                     <a onClick={rerouteToGithub} style={{color: "#f0f9ff", "textDecoration": "underline", "cursor": "pointer"}} >Github</a>{" "}|
                   </p>
               </div>

@@ -48,7 +48,7 @@ export default function AboutUs() {
                     <h5><strong>Mor Alkaslasi</strong></h5>
                     PhD student in Neuroscience
                     <br></br>
-                    Brown University-NIH
+                    Brown University-NIH*
                     <br></br>
                     Volunteer, Co-Director
                 </p>
@@ -61,7 +61,7 @@ export default function AboutUs() {
                     <h5><strong>Brittany Sincox</strong></h5>
                     PhD student in Neuroscience
                     <br></br>
-                    University College London-NIH
+                    University College London-NIH*
                     <br></br>
                     Volunteer, Co-Director
                 </p>
@@ -85,7 +85,7 @@ export default function AboutUs() {
                         <p>
                             <br></br>
                             <h5><strong>Matthew Nebiyou</strong></h5>
-                            Post-baccalaureate Fellow, NIH
+                            Post-baccalaureate Fellow, NIH*
                             <br></br>
                             PGCPS Committee Head
                         </p>
@@ -98,7 +98,7 @@ export default function AboutUs() {
                             <h5><strong>Grace Taumoefolau</strong></h5>
                             PhD student in Cell, Molecular, Developmental Biology and Biophysics
                             <br></br>
-                            Johns Hopkins University-NIH
+                            Johns Hopkins University-NIH*
                             <br></br>
                             ACPS Committee Head
                         </p>
