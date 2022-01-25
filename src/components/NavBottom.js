@@ -22,7 +22,6 @@ export default function NavBottom() {
                         <Col md={5} className="item text mb-3">
                           <h3>PATHS Mentorship</h3>
                           <p >Here to help YOU achieve your{<br></br>} STEM and Healthcare dreams!</p>
-                          <small style={{opacity: 0.5}}>*This is not endorsed by the National Institutes of Health (NIH), nor is it an NIH-affiliated program.</small>
                         </Col>
                       <Col sm={6} md={2} className="item">
                             <div>
