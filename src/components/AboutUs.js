@@ -81,7 +81,7 @@ export default function AboutUs() {
                         <p>
                             <br></br>
                             <h5><strong>Matthew Nebiyou</strong></h5>
-                            Post-baccalaureate Fellow
+                            Research Fellow
                             <br></br>
                             PGCPS Committee Head
                         </p>
@@ -164,7 +164,6 @@ export default function AboutUs() {
                 <Col sm={6} className="">
                     <p>
                         Dr. Jamie Hill-Daniel, Georgetown University<br></br>
-                        Dr. Herbert Geller, National Institutes of Health<br></br>
                         Darlene Bruton, Dr. Regina Spruill, Melynda Maynard, PGCPS Career and Technical Education<br></br>
                         PGCPS Health and Biosciences Advisory Committee<br></br>
                     </p>
