@@ -41,9 +41,18 @@ const ContactForm = () => {
   }
 
   return (
-      <div className="form-box">
+      // <div className="form-box">
+      <div style={{paddingBottom: 300}}>
+        <style type='text/css'>
+
+        </style>
         <h1>Contact Us</h1>
-        <form onSubmit={handleSubmit}>
+        <div className='container-fluid'>
+          <p>
+            Send an email to <a href="mailto:pathsmentorship@gmail.com" target="_blank">pathsmentorship@gmail.com</a> to get in touch!
+          </p>
+        </div>
+        {/* <form onSubmit={handleSubmit}>
           <div className="form-group required">
             <label className="control-label">Name</label>
             <input onChange={updateInput} value={formData.name || ''} className="form-control" type="text" name="name" required="true"/>
@@ -68,7 +77,7 @@ const ContactForm = () => {
             <textarea onChange={updateInput} value={formData.message || ''} className="form-control" name="message" required="true"></textarea>
           </div>
           <Button type="submit">Submit</Button>
-        </form>
+        </form> */}
       </div>
   )
 }

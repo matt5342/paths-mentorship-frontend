@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Navbar, Nav, Container, Image, Button } from 'react-bootstrap'
 import bio_logo4 from '../assets/logos/bio_logo4.png'; 
-import GoFundMe_logo from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/logos/GoFundMe_logo.svg'
+// import GoFundMe_logo from '/Users/mattsewell/Development/pathsmentorship/frontend/paths-mentorship/src/assets/logos/GoFundMe_logo.svg'
 import { useDispatch } from 'react-redux';
 import { userActions } from '../_actions/user.actions';
 
@@ -11,7 +11,7 @@ export default function Navigation() {
   const currentUser = useSelector((state) => state.authentication.user)
   const loggedIn = useSelector((state) => state.authentication.loggedIn)
   const dispatch = useDispatch();
-  const rerouteToGofundme = () => window.open('https://www.gofundme.com/f/paths-mentorship?utm_source=widget&utm_medium=referral&utm_campaign=p_cp+share-sheet', "_blank")
+  // const rerouteToGofundme = () => window.open('https://www.gofundme.com/f/paths-mentorship?utm_source=widget&utm_medium=referral&utm_campaign=p_cp+share-sheet', "_blank")
 
 
   const logout = () => { 
@@ -30,7 +30,6 @@ export default function Navigation() {
                 <Nav.Link href="programs" className="nav-link">Programs</Nav.Link>
                 <Nav.Link href="opportunities" className="nav-link">Opportunities</Nav.Link>
                 <Nav.Link href="impact" className="nav-link">Impact</Nav.Link>
-                {/* <Nav.Link href="students-parents" className="nav-link">Students & Parents</Nav.Link> */}
                 <Nav.Link href="about" className="nav-link">Who We Are</Nav.Link>
                 <Nav.Link href="contact" className="nav-link">Contact Us</Nav.Link>
                 {loggedIn && currentUser.roles.includes("ROLE_ADMIN") ? 
@@ -39,7 +38,7 @@ export default function Navigation() {
                 }
 
               </Nav>
-              <Nav className="ml-auto">
+              {/* <Nav className="ml-auto">
                 {
                   currentUser  ? 
                   <Nav>
@@ -49,8 +48,8 @@ export default function Navigation() {
                    : null
                   // : <Nav.Link href="login" className="nav-link">Log In</Nav.Link>
                 }
-              </Nav>
-              <Nav className="ml-auto">
+              </Nav> */}
+              {/* <Nav className="ml-auto">
                 <Button onClick={rerouteToGofundme}
                         variant="warning" style={{'fontSize': '15px'}}>
                         <Image fluid width="60px" 
@@ -59,7 +58,7 @@ export default function Navigation() {
                           src={GoFundMe_logo}  alt="donate"/><br></br>
                           Donate Now
                 </Button>
-              </Nav>
+              </Nav> */}
             </Navbar.Collapse>
           </Container>
         </Navbar>
