@@ -1,5 +1,7 @@
 import React from 'react';
 import mor_alkaslasi from '../assets/who_we_are/mor_alkaslasi.png'; 
+import andy_chia from '../assets/who_we_are/andy_chia.png'; 
+import medha_krishnagiri from '../assets/who_we_are/medha_krishnagiri.jpeg'; 
 import brittany_sincox from '../assets/who_we_are/brittany_sincox.png'; 
 import matthew_nebiyou from '../assets/who_we_are/matthew_nebiyou.jpeg'; 
 import grace_taumoefolau from '../assets/who_we_are/grace_taumoefolau.jpg'; 
@@ -35,45 +37,73 @@ export default function AboutUs() {
             </p>
         </Row>
         <hr></hr>
-        <Row className="justify-content-center">
-            <h2><strong>Program Directors</strong></h2>
-            <br></br><br></br><br></br>
-        </Row>
-        <Row className="justify-content-center text-center">
-            <Col>
-                <img width="60%" height="auto" className="img-responsive mx-auto" src={mor_alkaslasi}  alt="logo"/>
-                <br></br>
-                <p>
-                    <br></br>
-                    <h5><strong>Mor Alkaslasi</strong></h5>
-                    PhD student in Neuroscience
-                    <br></br>
-                    Volunteer, Co-Director
-                </p>
-            </Col>
-            <Col>
-                <img width="60%" height="auto" className="img-responsive mx-auto" src={brittany_sincox}  alt="logo"/>
-                <br></br>
-                <p>
-                    <br></br>
-                    <h5><strong>Brittany Sincox</strong></h5>
-                    PhD student in Neuroscience
-                    <br></br>
-                    Volunteer, Co-Director
-                </p>
-            </Col>
-        </Row>
-        <hr></hr>
-        <Row className="justify-content-center">
-            <h2 className="text-center"><strong>Executive Committee Members</strong></h2>
-        </Row>
 
         <Tabs>
             <TabList>
+                <Tab><h3 className="tab-link"><strong>2022-2023</strong></h3></Tab>
                 <Tab><h3 className="tab-link"><strong>2021-2022</strong></h3></Tab>
                 <Tab><h3 className="tab-link"><strong>2020-2021</strong></h3></Tab>
             </TabList>
             <TabPanel>
+                <Row className="justify-content-center py-3">
+                    <h2 className="text-center"><strong>Program Directors</strong></h2>
+                </Row>
+                <Row className="justify-content-center text-center">
+                    <Col>
+                    <img width="60%" height="auto" className="img-responsive mx-auto" src={medha_krishnagiri}  alt="logo"/>
+                        <br></br>
+                        <p>
+                            <br></br>
+                            <h5><strong>Medha Krishnagari</strong></h5>
+                            Science Policy Analyst
+                            <br></br>
+                            Volunteer, Co-Director
+                        </p>
+                    </Col>
+                    <Col>
+                        <img width="60%" height="auto" className="img-responsive mx-auto" src={andy_chia}  alt="logo"/>
+                        <br></br>
+                        <p>
+                            <br></br>
+                            <h5><strong>Andy Chia</strong></h5>
+                            PhD student, Johns Hopkins University
+                            <br></br>
+                            Volunteer, Co-Director
+                        </p>
+                    </Col>
+                </Row>
+            </TabPanel>
+            <TabPanel>
+                <Row className="justify-content-center py-3">
+                    <h2 className="text-center"><strong>Program Directors</strong></h2>
+                </Row>
+                <Row className="justify-content-center text-center">
+                    <Col>
+                        <img width="60%" height="auto" className="img-responsive mx-auto" src={mor_alkaslasi}  alt="logo"/>
+                            <br></br>
+                            <p>
+                                <br></br>
+                                <h5><strong>Mor Alkaslasi</strong></h5>
+                                PhD student in Neuroscience
+                                <br></br>
+                                Volunteer, Co-Director
+                            </p>
+                    </Col>
+                    <Col>
+                        <img width="60%" height="auto" className="img-responsive mx-auto" src={brittany_sincox}  alt="logo"/>
+                        <br></br>
+                        <p>
+                            <br></br>
+                            <h5><strong>Brittany Sincox</strong></h5>
+                            PhD student in Neuroscience
+                            <br></br>
+                            Volunteer, Co-Director
+                        </p>
+                    </Col>
+                </Row>
+                <Row className="justify-content-center py-3">
+                    <h2 className="text-center"><strong>Executive Committee Members</strong></h2>
+                </Row>
                 <Row className="justify-content-center text-center">
                     <Col>
                         <img width="60%" height="auto" className="img-responsive mx-auto" src={matthew_nebiyou}  alt="logo"/>
@@ -125,6 +155,33 @@ export default function AboutUs() {
                 </Row>
             </TabPanel>
             <TabPanel>
+            <Row className="justify-content-center py-3">
+                    <h2 className="text-center"><strong>Program Directors</strong></h2>
+                </Row>
+                <Row className="justify-content-center text-center">
+                    <Col>
+                        <img width="60%" height="auto" className="img-responsive mx-auto" src={mor_alkaslasi}  alt="logo"/>
+                            <br></br>
+                            <p>
+                                <br></br>
+                                <h5><strong>Mor Alkaslasi</strong></h5>
+                                PhD student in Neuroscience
+                                <br></br>
+                                Volunteer, Co-Director
+                            </p>
+                    </Col>
+                    <Col>
+                        <img width="60%" height="auto" className="img-responsive mx-auto" src={brittany_sincox}  alt="logo"/>
+                        <br></br>
+                        <p>
+                            <br></br>
+                            <h5><strong>Brittany Sincox</strong></h5>
+                            PhD student in Neuroscience
+                            <br></br>
+                            Volunteer, Co-Director
+                        </p>
+                    </Col>
+                </Row>
                 <Row>
                     <Col className="justify-content-center">
                         <h4 className="text-center"><strong>PGCPS Committee</strong></h4>
@@ -148,7 +205,7 @@ export default function AboutUs() {
                     </Col>
                 </Row>
             </TabPanel>
-        </Tabs>    
+        </Tabs> 
 
         <hr></hr>
         <Row className="justify-content-center">
