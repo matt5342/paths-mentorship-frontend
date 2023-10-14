@@ -135,6 +135,7 @@ export default function AboutUs() {
                             <strong>Kaitlin Ballenger</strong>, Development Workshop Coordinator<br></br>
                             <strong>Kathleen Carmichael</strong>, Administrative Secretary<br></br>
                             <strong>Daniel Clark</strong>, Development Workshop Coordinator<br></br>
+                            <strong>Ariana Marangakis-Price</strong>, Development Workshop Coordinator<br></br>
                             <strong>Vicki Remley</strong>, API Coordinator<br></br>
                             <strong>Adit Sabnis</strong>, Career Seminar Coordinator<br></br>
                             <strong>Rachel Tavory</strong>, Development Workshop Coordinator
